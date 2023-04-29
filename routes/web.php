@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,9 +59,15 @@ Route::get('/services', function () {
 });
 
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/newslist', [NewsController::class,'index']);
+
+Route::get('/addnews', [NewsController::class,'create']);
+Route::post('/addnews', [NewsController::class,'store']);
+
+Route::get('/editnews/{news}', [NewsController::class,'edit']);
+Route::post('/editnews/{news}', [NewsController::class,'update']);
+
+Route::delete('/newslist/{news}', [NewsController::class,'destroy']);
 
 
 
