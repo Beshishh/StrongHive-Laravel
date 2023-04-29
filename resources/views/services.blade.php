@@ -1,6 +1,6 @@
-@extends('layouts.main');
+@extends('layouts.main')
 
-@section('main-container');
+@section('main-container')
 
     <main>
         <!--? Hero Start -->
@@ -19,8 +19,8 @@
         </div>
         <!-- Hero End -->
         <!--? Services Area Start -->
-        <section class="services-area pt-100 pb-150">
-            <!--? Want To work -->
+        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
+            {{-- <!--? Want To work -->
             <section class="wantToWork-area w-padding">
                 <div class="container">
                     <div class="row align-items-end justify-content-between">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </section>
-            <!-- Want To work End -->
+            <!-- Want To work End --> --}}
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6">

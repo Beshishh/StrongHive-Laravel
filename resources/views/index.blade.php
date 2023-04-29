@@ -1,7 +1,7 @@
 
-@extends('layouts.main');
+@extends('layouts.main')
 
-@section('main-container');
+@section('main-container')
 
     <main>
         <!--? slider Area Start-->
@@ -259,6 +259,7 @@
             </div>
         </div>
         <!-- Gallery Area End -->
+        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
         <!--? Want To work -->
         <section class="wantToWork-area w-padding">
             <div class="container">
@@ -345,7 +346,7 @@
         </div>
         <!-- Team Ara End -->
         <!--? Want To work -->
-        <section class="wantToWork-area w-padding section-bg" data-background="assets/img/gallery/section_bg02.png">
+        {{-- <section class="wantToWork-area w-padding section-bg" data-background="assets/img/gallery/section_bg02.png">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10">
@@ -358,7 +359,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Want To work End -->
         <!--? Date Tabs Start -->
         <section class="date-tabs section-padding30">
@@ -835,7 +836,7 @@
                                 </div>
                             </div>
                             <!--End Section Tittle  -->
-                            <form id="contact-form" action="#" method="POST">
+                            <form id="contact-form" action="#" class="contact-form" method="POST">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-box user-icon mb-30">

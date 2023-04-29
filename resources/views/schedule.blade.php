@@ -1,6 +1,6 @@
-@extends('layouts.main');
+@extends('layouts.main')
 
-@section('main-container');
+@section('main-container')
 
     <main>
         <!--? Hero Start -->

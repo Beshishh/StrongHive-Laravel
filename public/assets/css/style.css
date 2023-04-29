@@ -46,25 +46,26 @@
 
 .boxed-btn {
     background: #fff;
-    color: #f04e3c !important;
+    color: #FF7F11 !important;
     display: inline-block;
     padding: 18px 44px;
     font-family: "Teko", sans-serif;
     font-size: 14px;
     font-weight: 400;
     border: 0;
-    border: 1px solid #f04e3c;
+    border: 1px solid #FF7F11;
     letter-spacing: 3px;
     text-align: center;
-    color: #f04e3c;
+    color: #FF7F11;
     text-transform: uppercase;
-    cursor: pointer
+    cursor: pointer;
+    background-color: #242423;
 }
 
 .boxed-btn:hover {
-    background: #f04e3c;
-    color: #fff !important;
-    border: 1px solid #f04e3c
+    background: #FF7F11;
+    color: #FFFFFC !important;
+    border: 1px solid #FF7F11
 }
 
 .boxed-btn:focus {
@@ -130,7 +131,7 @@
 body {
     font-family: "Barlow", sans-serif;
     font-weight: normal;
-    font-style: normal
+    font-style: normal,
 }
 
 h1,
@@ -140,7 +141,7 @@ h4,
 h5,
 h6 {
     font-family: "Teko", sans-serif;
-    color: #2c234d;
+    color: #FF3F00;
     margin-top: 0px;
     font-style: normal;
     font-weight: 500;
@@ -149,7 +150,7 @@ h6 {
 
 p {
     font-family: "Barlow", sans-serif;
-    color: #10285d;
+    color: #FFFFFC;
     font-size: 16px;
     line-height: 30px;
     margin-bottom: 15px;
@@ -211,7 +212,7 @@ a {
 }
 
 a:hover {
-    color: #fff
+    color: #FFFFFC
 }
 
 a:focus,
@@ -392,7 +393,7 @@ hr {
 }
 
 .btn {
-    background: #ff1313;
+    background:#FF7F11;
     font-family: "Teko", sans-serif;
     text-transform: uppercase;
     padding: 27px 44px;
@@ -443,7 +444,7 @@ hr {
     top: 0;
     width: 101%;
     height: 101%;
-    background: #c20505;
+    background: #FF3F00;
     z-index: 1;
     border-radius: 5px;
     transition: transform 0.5s;
@@ -576,7 +577,7 @@ hr {
 
 #scrollUp,
 #back-top {
-    background: #f04e3c;
+    background: #FF7F11;
     height: 50px;
     width: 50px;
     right: 31px;
@@ -2418,7 +2419,7 @@ hr {
     font-weight: 300;
     margin-left: 72px;
     margin-bottom: 22px;
-    color: #f04e3c;
+    color: #FF7F11;
     text-transform: uppercase;
     display: inline-block;
     position: relative
@@ -2435,7 +2436,7 @@ hr {
     content: "";
     width: 50px;
     height: 2px;
-    background: #f04e3c;
+    background: #FF7F11;
     top: 0;
     left: -67px;
     top: 50%;
@@ -2445,7 +2446,7 @@ hr {
 .section-tittle h2 {
     font-size: 50px;
     display: block;
-    color: #2c234d;
+    color: #FFFFFC;
     font-weight: 700;
     text-transform: uppercase
 }
@@ -2469,7 +2470,7 @@ hr {
 }
 
 .section-tittle2 h2 {
-    color: #fff
+    color: #FFFFFC
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2592,7 +2593,7 @@ hr {
 }
 
 .header-area .main-header .main-menu ul li a  {
-    color: #fff;
+    color: #FFFFFC;
     font-weight: 300;
     padding: 39px 25px;
     display: block;
@@ -2680,7 +2681,7 @@ hr {
 }
 
 .header-sticky.sticky-bar {
-    background: #000
+    background: #242423;
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
@@ -2772,6 +2773,7 @@ hr {
 }
 
 .slider-height2 {
+    background-color: #242423;
     height: 450px;
     background-size: cover
 }
@@ -2843,7 +2845,7 @@ hr {
     font-weight: 300;
     margin-bottom: 35px;
     text-transform: uppercase;
-    color: #f04e3c;
+    color: #FF7F11;
     display: inline-block;
     position: relative;
     padding-left: 100px;
@@ -2872,7 +2874,7 @@ hr {
     font-size: 70px;
     font-weight: 700;
     margin-bottom: 14px;
-    color: #fff;
+    color: #FFFFFC;
     line-height: 1.2;
     margin-bottom: 40px;
     text-transform: uppercase
@@ -2968,7 +2970,7 @@ hr {
 }
 
 .slider-area .video-icon a {
-    background: #ff1313;
+    background: #FF7F11;
     color: #fff;
     width: 80px;
     height: 80px;
@@ -3007,7 +3009,7 @@ hr {
     bottom: -2px;
     right: -2px;
     border-radius: inherit;
-    border: 1px solid #ff1313;
+    border: 1px solid #FF3F00;
     -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
     animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite
 }
@@ -3087,7 +3089,9 @@ hr {
         font-size: 35px
     }
 }
-
+.about-area {
+    background-color:#242423;
+}
 .about-area .about-caption {
     padding-left: 50px
 }
@@ -3128,13 +3132,13 @@ hr {
 .about-area .about-caption .pera-top {
     font-size: 16px;
     font-weight: 500;
-    color: #212025;
+    color: #FFFFFC;
     margin-bottom: 25px
 }
 
 .about-area .about-caption .pera-bottom {
     font-size: 16px;
-    color: #212025;
+    color: #FFFFFC;
     font-weight: 300
 }
 
@@ -3142,6 +3146,9 @@ hr {
     width: 100%
 }
 
+.about-area2{
+    background-color:#242423;
+}
 .about-area2 .about-caption {
     padding-left: 90px
 }
@@ -3222,7 +3229,7 @@ hr {
     transition: .4s;
     position: relative;
     z-index: 1;
-    background: #fff;
+    background: #242423;
     overflow: hidden
 }
 
@@ -3233,7 +3240,7 @@ hr {
 }
 
 .services-area .single-cat .cat-icon i {
-    color: #000;
+    color: #FFFFFC;
     font-size: 50px;
     margin-bottom: 30px;
     display: block
@@ -3245,7 +3252,7 @@ hr {
     font-weight: 400;
     margin-bottom: 21px;
     display: block;
-    color: #06080a;
+    color: #FFFFFC;
     text-transform: uppercase;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -3259,7 +3266,7 @@ hr {
     font-weight: 400;
     margin-bottom: 21px;
     display: block;
-    color: #f04e3c;
+    color: #FF7F11;
     text-transform: uppercase;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -3285,12 +3292,12 @@ hr {
 }
 
 .services-area .single-cat .cat-cap h5>a:Hover {
-    color: #f04e3c
+    color: #FF7F11
 }
 
 .services-area .single-cat .cat-cap p {
     margin-bottom: 36px;
-    color: #303133;
+    color: #FFFFFC;
     font-size: 16px;
     -webkit-transition: .2s;
     -moz-transition: .2s;
@@ -3333,7 +3340,7 @@ hr {
     font-family: "Teko", sans-serif;
     font-size: 16px;
     color: #fff;
-    background: #f81f1f;
+    background: #FF7F11;
     font-size: 16px;
     text-transform: uppercase;
     padding: 20px 0;
@@ -3354,11 +3361,11 @@ hr {
 }
 
 .services-area .single-cat:hover .cat-icon i {
-    color: #f81f1f
+    color: #FF7F11
 }
 
 .services-area .single-cat.single-cat2 {
-    background: #f7fbff
+    background: #242423
 }
 
 .wantToWork-area .wantToWork-caption h2 {
@@ -3441,7 +3448,12 @@ hr {
 }
 
 .contact-form-main .form-tittle {
+    background-color: #242423;
     padding: 83px 51px 0px 67px
+}
+
+.contact-form-main .contact-form{
+    background-color: #242423;
 }
 
 @media (max-width: 575px) {
@@ -3478,16 +3490,16 @@ hr {
     padding: 10px 25px;
     padding-right: 30px;
     border: 0;
-    color: #112957;
+    color: #FFFFFC;
     font-weight: 500;
     text-transform: capitalize;
     border-radius: 0px;
-    border-bottom: 2px solid #e9f0f4;
+    border-bottom: 2px solid #FF7F11;
     font-size: 16px
 }
 
 .contact-form-main #contact-form input::-moz-placeholder {
-    color: #112957;
+    color: #FFFFFC;
     font-size: 16px;
     font-weight: 300;
     transition: .4s
@@ -3510,13 +3522,13 @@ hr {
     height: 60px;
     width: 100%;
     border: 0;
-    color: #112957;
+    color: #FFFFFC;
     font-weight: 300;
     font-size: 16px;
     text-transform: capitalize;
     padding-top: 10px;
     border-radius: 0px;
-    border-bottom: 2px solid #e9f0f4
+    border-bottom: 2px solid #FF7F11
 }
 
 .contact-form-main #contact-form .nice-select::after {
@@ -3543,7 +3555,7 @@ hr {
 }
 
 .contact-form-main #contact-form textarea {
-    color: #112957;
+    color: #FFFFFC;
     background: none;
     font-weight: 500;
     letter-spacing: 2px;
@@ -3553,7 +3565,7 @@ hr {
     padding: 30px 21px;
     border: 0;
     border-radius: 0px;
-    border-bottom: 2px solid #e9f0f4
+    border-bottom: 2px solid #FF7F11
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3575,7 +3587,7 @@ hr {
 }
 
 .contact-form-main #contact-form textarea::placeholder {
-    color: #112957;
+    color: #a3a3a3;
     font-size: 16px;
     font-weight: 300;
     transition: .4s
@@ -3662,7 +3674,7 @@ hr {
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption {
-    background: #f7fdff;
+    background: #242423;
     -webkit-transition: .4s;
     -moz-transition: .4s;
     -o-transition: .4s;
@@ -3681,36 +3693,36 @@ hr {
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption .caption>span {
-    background: #000000;
+    background: #FFFFFC;
     padding: 7px 20px;
     line-height: 1;
     margin-bottom: 10px;
-    color: #fff;
+    color: #242423;
     display: inline-block;
     font-size: 16px;
     font-family: "Teko", sans-serif
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption .caption h3 {
-    color: #2c234d;
+    color: #FFFFFC;
     font-size: 30px;
     display: block
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption .caption p {
-    color: #8f89a3;
+    color: #FFFFFC;
     font-size: 14px;
     margin-bottom: 0px;
     display: block
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption .caption p>span {
-    color: #2c234d;
+    color: #FFFFFC;
     font-size: 14px
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption:hover {
-    background: #ff1313
+    background: #FF7F11
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption:hover .caption>span {
@@ -3731,7 +3743,7 @@ hr {
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption.active {
-    background: #ff1313
+    background: #FF7F11
 }
 
 .date-tabs .tab-wrapper .single-box .single-caption.active .caption>span {
@@ -3752,7 +3764,7 @@ hr {
 }
 
 .date-tabs .properties__button {
-    background: #f7fdff;
+    background: #242423;
     padding: 33px 30px 12px 33px
 }
 
@@ -3767,7 +3779,7 @@ hr {
 }
 
 .date-tabs .properties__button .nav-tabs .nav-link {
-    color: #2c234d;
+    color: #FFFFFC;
     font-family: "Teko", sans-serif;
     font-size: 25px;
     border: 0;
@@ -3804,7 +3816,7 @@ hr {
 .date-tabs .properties__button .nav-tabs .nav-item.show .nav-link,
 .date-tabs .properties__button .nav-tabs .nav-link.active {
     color: #fff;
-    background: #ff1313
+    background: #FF7F11
 }
 
 .tab-pane {
@@ -3813,7 +3825,9 @@ hr {
     -o-transition: .6s;
     transition: .6s
 }
-
+.gallery-area{
+    background-color: #242423;
+}
 .gallery-area .box {
     position: relative
 }
@@ -3889,7 +3903,7 @@ hr {
 
 .gallery-area .box .overlay .overlay-content a {
     color: #fff;
-    background: #ff0000;
+    background: #FF7F11;
     width: 60px;
     height: 60px;
     display: inline-block;
@@ -3908,7 +3922,7 @@ hr {
 
 .gallery-area .box .overlay .overlay-content a:hover {
     background: #fff;
-    color: #ff0000
+    color: #FF7F11
 }
 
 .gallery-area .box .overlay .overlay-content p {
@@ -3945,15 +3959,14 @@ hr {
 
 .testimonial-area .testimonial-caption p {
     font-size: 16px;
-    color: #2c234d;
-    color: #717b9b;
+    color: #FFFFFC;
     line-height: 45px;
     line-height: 1.5;
     margin-bottom: 37px
 }
 
 .testimonial-area .rattiong-caption span {
-    color: #06080a;
+    color: #FF7F11;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
@@ -3961,7 +3974,7 @@ hr {
 }
 
 .testimonial-area .rattiong-caption span span {
-    color: #767676;
+    color: #FF3F00;
     font-size: 16px;
     text-transform: capitalize;
     padding-left: 15px
@@ -3996,7 +4009,9 @@ hr {
 .slick-initialized .slick-slide {
     outline: 0
 }
-
+.team-area{
+    background-color: #242423;
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .team-area {
         padding-bottom: 90px
@@ -4073,7 +4088,7 @@ hr {
     content: "";
     width: 40px;
     height: 2px;
-    background: #ff0000;
+    background: #FF7F11;
     top: 0;
     left: -67px;
     top: 50%;
@@ -4088,7 +4103,7 @@ hr {
 }
 
 .team-area .single-team:hover .team-caption {
-    background: #ff1313;
+    background: #FF7F11;
     bottom: 0
 }
 
@@ -4287,7 +4302,7 @@ hr {
 }
 
 .home-blog-area .home-blog-single .blog-img-cap .blog-img .blog-date {
-    background: #ff1313;
+    background: #FF7F11;
     padding: 15px 34px;
     display: inline-block;
     position: absolute;
@@ -4345,9 +4360,9 @@ hr {
 }
 
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap {
-    background: #f7fdff;
+    background: #242423;
     padding: 37px 129px 37px 50px;
-    border: 1px solid #f7f7f7
+    border: 1px solid #242423
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -4375,7 +4390,7 @@ hr {
 }
 
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap span {
-    color: #0d1628;
+    color: #FFFFFC;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -4390,7 +4405,7 @@ hr {
     content: "";
     width: 40px;
     height: 2px;
-    background: #0d1628;
+    background: #FF7F11;
     top: 0;
     left: -67px;
     top: 50%;
@@ -4398,7 +4413,7 @@ hr {
 }
 
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a {
-    color: #191d34;
+    color: #FFFFFC;
     font-size: 24px;
     font-weight: 700;
     line-height: 1.4;
@@ -4408,7 +4423,7 @@ hr {
 }
 
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a:hover {
-    color: #f04e3c
+    color: #FF7F11
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4448,7 +4463,7 @@ hr {
 
 .blog_area a:hover,
 .blog_area a :hover {
-    background: -webkit-linear-gradient(131deg, #f04e3c 0%, #f04e3c 99%);
+    background: -webkit-linear-gradient(131deg, #FF7F11 0%, #FF7F11 99%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
@@ -4871,9 +4886,11 @@ hr {
 
 .blog_details {
     padding: 30px 0 20px 10px;
-    box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3)
-}
 
+}
+.block-head {
+    color: #FFFFFC;
+}
 @media (min-width: 768px) {
     .blog_details {
         padding: 60px 30px 35px 35px
@@ -4947,7 +4964,7 @@ hr {
     left: 10px;
     display: block;
     color: #fff;
-    background-color: #f04e3c;
+    background-color: #FF7F11;
     padding: 8px 15px;
     border-radius: 5px
 }
@@ -4995,11 +5012,11 @@ hr {
     content: "";
     display: block;
     padding-top: 15px;
-    border-bottom: 1px solid #f0e9ff
+    border-bottom: 1px solid #FF7F11
 }
 
 .blog_right_sidebar .single_sidebar_widget {
-    background: #fbf9ff;
+    background: #242423;
     padding: 30px;
     margin-bottom: 30px
 }
@@ -5010,12 +5027,13 @@ hr {
 
 .blog_right_sidebar .search_widget .form-control {
     height: 50px;
-    border-color: #f0e9ff;
+    border-color: #FF7F11;
     font-size: 13px;
     color: #999999;
     padding-left: 20px;
     border-radius: 0;
-    border-right: 0
+    border-right: 0;
+    background-color: #242423;
 }
 
 .blog_right_sidebar .search_widget .form-control::placeholder {
@@ -5029,9 +5047,9 @@ hr {
 }
 
 .blog_right_sidebar .search_widget .input-group button {
-    background: #f04e3c;
+    background: #FF7F11;
     border-left: 0;
-    border: 1px solid #f0e9ff;
+    border: 1px solid #FF7F11;
     padding: 4px 15px;
     border-left: 0;
     cursor: pointer
@@ -5048,11 +5066,12 @@ hr {
 
 .blog_right_sidebar .newsletter_widget .form-control {
     height: 50px;
-    border-color: #f0e9ff;
+    border-color: #242423;
     font-size: 13px;
     color: #999999;
     padding-left: 20px;
-    border-radius: 0
+    border-radius: 0;
+    background-color: #242423;
 }
 
 .blog_right_sidebar .newsletter_widget .form-control::placeholder {
@@ -5060,7 +5079,7 @@ hr {
 }
 
 .blog_right_sidebar .newsletter_widget .form-control:focus {
-    border-color: #f0e9ff;
+    border-color: #FF7F11;
     outline: 0;
     box-shadow: none
 }
@@ -5080,7 +5099,7 @@ hr {
 }
 
 .blog_right_sidebar .post_category_widget .cat-list li {
-    border-bottom: 1px solid #f0e9ff;
+    border-bottom: 1px solid #FF7F11;
     transition: all 0.3s ease 0s;
     padding-bottom: 12px
 }
@@ -5136,13 +5155,13 @@ hr {
 
 .blog_right_sidebar .tag_cloud_widget ul li a {
     display: inline-block;
-    border: 1px solid #eeeeee;
-    background: #fff;
+    border: 1px solid #FF7F11;
+    background: #242423;
     padding: 4px 20px;
     margin-bottom: 8px;
     margin-right: 3px;
     transition: all 0.3s ease 0s;
-    color: #888888;
+    color: #FFFFFC;
     font-size: 13px
 }
 
@@ -5191,9 +5210,10 @@ hr {
     width: 45px;
     height: 45px;
     border-radius: 0 !important;
-    color: #8a8a8a;
-    border: 1px solid #f0e9ff;
-    margin-right: 10px
+    color: #FF7F11;
+    border: 1px solid #242423;
+    margin-right: 10px;
+    background-color: #242423;
 }
 
 .blog-pagination .page-link i,
@@ -5202,9 +5222,9 @@ hr {
 }
 
 .blog-pagination .page-item.active .page-link {
-    background-color: #fbf9ff;
-    border-color: #f0e9ff;
-    color: #888888
+    background-color: #FF7F11;
+    border-color: #FF7F11;
+    color: #FFFFFC
 }
 
 .blog-pagination .page-item:last-child .page-link {
@@ -5656,7 +5676,7 @@ hr {
     font-size: 16px;
     margin-bottom: 0;
     font-size: 16px;
-    color: #2a2a2a
+    color: #FF7F11
 }
 
 .contact-info .media-body h3 a:hover {
@@ -5664,7 +5684,7 @@ hr {
 }
 
 .contact-info .media-body p {
-    color: #8a8a8a
+    color: #FFFFFC
 }
 
 .contact-title {
@@ -5682,7 +5702,7 @@ hr {
 }
 
 .form-contact .form-control {
-    border: 1px solid #e5e6e9;
+    border: 1px solid #FF7F11;
     border-radius: 0px;
     height: 48px;
     padding-left: 18px;

@@ -1,6 +1,6 @@
-@extends('layouts.main');
+@extends('layouts.main')
 
-@section('main-container');
+@section('main-container')
 
     <main>
         <!--? Hero Start -->
@@ -19,6 +19,7 @@
         </div>
         <!-- Hero End -->
         <!--? Blog Area Start-->
+        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
@@ -34,7 +35,7 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head">Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                         he earth it first without heaven in place seed it second morning saying.</p>
@@ -54,7 +55,7 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head">Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                         he earth it first without heaven in place seed it second morning saying.</p>
@@ -74,7 +75,7 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head">Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                         he earth it first without heaven in place seed it second morning saying.</p>
@@ -94,7 +95,7 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head" >Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                         he earth it first without heaven in place seed it second morning saying.</p>
@@ -114,7 +115,7 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head">Google inks pact for new 35-storey office</h2>
                                     </a>
                                     <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                         he earth it first without heaven in place seed it second morning saying.</p>
@@ -165,7 +166,7 @@
                                 </form>
                             </aside>
                             <aside class="single_sidebar_widget post_category_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
+                                <h4 class="widget_title" >Category</h4>
                                 <ul class="list cat-list">
                                     <li>
                                         <a href="#" class="d-flex">
@@ -206,12 +207,12 @@
                                 </ul>
                             </aside>
                             <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
+                                <h3 class="widget_title">Recent Post</h3>
                                 <div class="media post_item">
                                     <img src="assets/img/post/post_1.png" alt="post">
                                     <div class="media-body">
                                         <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
+                                            <h3>From life was you fish...</h3>
                                         </a>
                                         <p>January 12, 2019</p>
                                     </div>
@@ -220,7 +221,7 @@
                                     <img src="assets/img/post/post_2.png" alt="post">
                                     <div class="media-body">
                                         <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
+                                            <h3>The Amazing Hubble</h3>
                                         </a>
                                         <p>02 Hours ago</p>
                                     </div>
@@ -229,7 +230,7 @@
                                     <img src="assets/img/post/post_3.png" alt="post">
                                     <div class="media-body">
                                         <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
+                                            <h3>Astronomy Or Astrology</h3>
                                         </a>
                                         <p>03 Hours ago</p>
                                     </div>
@@ -238,14 +239,14 @@
                                     <img src="assets/img/post/post_4.png" alt="post">
                                     <div class="media-body">
                                         <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
+                                            <h3>Asteroids telescope</h3>
                                         </a>
                                         <p>01 Hours ago</p>
                                     </div>
                                 </div>
                             </aside>
                             <aside class="single_sidebar_widget tag_cloud_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
+                                <h4 class="widget_title">Tag Clouds</h4>
                                 <ul class="list">
                                     <li>
                                         <a href="#">project</a>
@@ -275,7 +276,7 @@
                             </aside>
 
                             <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
+                                <h4 class="widget_title">Instagram Feeds</h4>
                                 <ul class="instagram_row flex-wrap">
                                     <li>
                                         <a href="#">
@@ -310,7 +311,7 @@
                                 </ul>
                             </aside>
                             <aside class="single_sidebar_widget newsletter_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
+                                <h4 class="widget_title">Newsletter</h4>
                                 <form action="#">
                                     <div class="form-group">
                                         <input type="email" class="form-control" onfocus="this.placeholder = ''"

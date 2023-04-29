@@ -1,6 +1,6 @@
-@extends('layouts.main');
+@extends('layouts.main')
 
-@section('main-container');
+@section('main-container')
 
 
     <main>
@@ -20,6 +20,7 @@
         </div>
         <!-- Hero End -->
         <!--? About Area Start -->
+        
         <section class="about-area section-padding30">
             <div class="container">
                 <div class="row align-items-center">
@@ -166,7 +167,7 @@
             </div>
         </section>
         <!-- About-2 Area End -->
-        <!--? Want To work -->
+        {{-- <!--? Want To work -->
         <section class="wantToWork-area w-padding">
             <div class="container">
                 <div class="row align-items-end justify-content-between">
@@ -181,7 +182,8 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
+        
         <!-- Want To work End -->
         <!--? Team Ara Start -->
         <div class="team-area pb-150">
@@ -251,7 +253,7 @@
             </div>
         </div>
         <!-- Team Ara End -->
-        <!--? Want To work -->
+        {{-- <!--? Want To work -->
         <section class="wantToWork-area w-padding section-bg" data-background="assets/img/gallery/section_bg02.png">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -265,7 +267,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- Want To work End -->
     </main>
  

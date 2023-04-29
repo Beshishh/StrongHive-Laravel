@@ -1,6 +1,6 @@
-@include('layouts.header');
+@include('layouts.header')
 @yield('main-container')
-@include('layouts.footer');
+@include('layouts.footer')
 <style>
 img {
   margin: 0 auto;

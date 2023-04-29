@@ -2679,6 +2679,7 @@ hr {
     display: inline-block;
     position: relative;
     z-index: 1
+
 }
 
 .main-header .main-menu ul li a {
@@ -2692,7 +2693,8 @@ hr {
     -moz-transition: all .3s ease-out 0s;
     -ms-transition: all .3s ease-out 0s;
     -o-transition: all .3s ease-out 0s;
-    transition: all .3s ease-out 0s
+    transition: all .3s ease-out 0s;
+    
 }
 
 .main-header .main-menu ul li:hover>a {
@@ -2868,7 +2870,7 @@ hr {
     font-size: 70px;
     font-weight: 900;
     margin-bottom: 14px;
-    color: #ffffff;
+    color: #FFFFFC;
     font-family: 'Barlow', sans-serif;
     line-height: 1.2;
     text-transform: uppercase
