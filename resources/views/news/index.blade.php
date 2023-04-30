@@ -8,6 +8,24 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
+                <div class="container">
+                <div class="form-group">
+              <div class="row align-items-end">
+                <div class= "col">
+                  <form>
+                    <div class="d-flex align-items-center justify-content-center">
+                      <div class = "col">
+                        <input type="search" class="form-control" placeholder="Find news here"  name="search"value="{{ request('search') }}">
+                      </div>
+                      <div class = "col-sm-2">
+                        <a href="{{url('/newslist')}}" title="news"><i class="btn btn-primary">Clear search</i></a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+                </div>
+                </div>
                 <h4 class="card-title"> News Table</h4>
                 <a href = "addnews" class ="btn btn-primary btn-sm btn-flat">
                 <i class="fa fa-plus"></i>New<a>
@@ -56,6 +74,7 @@
                         </td>
                         <td>
                           <form action="{{ url('newslist/' . $news->id) }}" method="POST">
+                            <a href="{{url('detailnews/' .$news->id)}}" title="detail"><i class="fa fa-btn fa-eye" style='padding-right: 9px;'></i></a>
                             <a href="{{url('editnews/' .$news->id)}}" title="edit"><i class="fa fa-btn fa-edit"></i></a>
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}

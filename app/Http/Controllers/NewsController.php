@@ -13,6 +13,24 @@ class NewsController extends Controller
         return view('news.index', compact('news'));
     }
 
+    public function show(News $news)
+    {  
+        return view('news.detail', compact('news'));
+    }
+    
+    
+    public function search(News $news)
+    {  
+        if (request('search')) {
+            $news = News::where('title', 'like', '%' . request('search') . '%')->get();
+        } else {
+            $news = News::all();
+        }
+    
+        return view('news.index', compact('news'));
+    }
+
+
     public function create()
     {
         return view('news.create');

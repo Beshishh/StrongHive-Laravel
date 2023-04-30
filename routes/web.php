@@ -61,6 +61,11 @@ Route::get('/services', function () {
 
 Route::get('/newslist', [NewsController::class,'index']);
 
+Route::get('/newslist', [NewsController::class,'search']);
+
+
+Route::get('/detailnews/{news}', [NewsController::class, 'show']);
+
 Route::get('/addnews', [NewsController::class,'create']);
 Route::post('/addnews', [NewsController::class,'store']);
 
