@@ -13,7 +13,7 @@
               <div class="row align-items-end">
                 <div class= "col">
                   <form>
-                    <div class="d-flex align-items-center justify-content-center">
+                    <div class="row align-items-center ">
                       <div class = "col">
                         <input type="search" class="form-control" placeholder="Find news here"  name="search"value="{{ request('search') }}">
                       </div>
