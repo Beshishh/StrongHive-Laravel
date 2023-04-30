@@ -10,7 +10,7 @@
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title"> {{$news->title}}</h4>
-    <img src="{{ asset('assets/img/blog/' .$news->image) }}" class="img-thumbnail" alt="{{ $news->image }}" width="600" height="320">
+    <img src="{{ asset('assets/img/blog/' .$news->image) }}" class="card-thumbnail" alt="{{ $news->image }}" width="600" height="320">
           <p>Description: {{$news->description}} </p>
           <p class="items-text">Created: {{ $news->created_at }}</p>
           <p class="items-text">Updated: {{ $news->updated_at }}</p>

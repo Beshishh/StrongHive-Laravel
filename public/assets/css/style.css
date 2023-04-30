@@ -2804,7 +2804,7 @@ hr {
 
 .slider-area {
     margin-top: -1px;
-    background-image: url(../img/hero/h1_hero.png);
+    background-image: url(../img/hero/hero1.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -3426,7 +3426,8 @@ hr {
 }
 
 .contact-form-main {
-    position: relative
+    position: relative;
+    background-color: #242423;
 }
 
 .contact-form-main .from-left {
@@ -3468,7 +3469,8 @@ hr {
 
 .contact-form-main #contact-form {
     padding: 61px 51px 79px 69px;
-    position: relative
+    position: relative;
+    background-color: #242423;
 }
 
 @media (max-width: 575px) {
