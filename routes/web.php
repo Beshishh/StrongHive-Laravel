@@ -1,11 +1,8 @@
 <?php
 
-use App\Http\Controllers\GalleryController;
-<<<<<<< HEAD
-use App\Http\Controllers\NewsController;
-=======
 use App\Http\Controllers\CoachController;
->>>>>>> 2e5963a0bcb1db8fc785952f3d8c432a583098d9
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
