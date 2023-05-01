@@ -67,7 +67,7 @@
             </a>
           </li>
           <li>
-            <a href="{{ url('/coacheslist') }}">
+            <a href="{{ url('/coachlist') }}">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Coaches List</p>
             </a>
