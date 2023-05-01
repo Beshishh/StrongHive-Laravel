@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,4 +77,19 @@ Route::post('/editnews/{news}', [NewsController::class,'update']);
 Route::delete('/newslist/{news}', [NewsController::class,'destroy']);
 
 
+
+Route::get('/gallerylist', [GalleryController::class,'index']);
+
+Route::get('/gallerylist', [GalleryController::class,'search']);
+
+
+Route::get('/gallerylist/{gallery}', [GalleryController::class, 'show']);
+
+Route::get('/addgallery', [GalleryController::class,'create']);
+Route::post('/addgallery', [GalleryController::class,'store']);
+
+Route::get('/editgallery/{gallery}', [GalleryController::class,'edit']);
+Route::post('/editgallery/{gallery}', [GalleryController::class,'update']);
+
+Route::delete('/gallerylist/{gallery}', [GalleryController::class,'destroy']);
 
