@@ -24,84 +24,23 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="title">Edit Profile</h5>
+                            <h5 class="title">Profile</h5>
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="row">
-                                    <div class="col-md-5 pr-1">
-                                        <div class="form-group">
-                                            <label>Company (disabled)</label>
-                                            <input type="text" class="form-control" disabled="" placeholder="Company"
-                                                value="Creative Code Inc.">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 px-1">
-                                        <div class="form-group">
-                                            <label>Username</label>
-                                            <input type="text" class="form-control" placeholder="Username"
-                                                value="michael23">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 pl-1">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" placeholder="Email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 pr-1">
-                                        <div class="form-group">
-                                            <label>First Name</label>
-                                            <input type="text" class="form-control" placeholder="Company" value="Mike">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 pl-1">
-                                        <div class="form-group">
-                                            <label>Last Name</label>
-                                            <input type="text" class="form-control" placeholder="Last Name"
-                                                value="Andrew">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>Address</label>
-                                            <input type="text" class="form-control" placeholder="Home Address"
-                                                value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4 pr-1">
-                                        <div class="form-group">
-                                            <label>City</label>
-                                            <input type="text" class="form-control" placeholder="City" value="Mike">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 px-1">
-                                        <div class="form-group">
-                                            <label>Country</label>
-                                            <input type="text" class="form-control" placeholder="Country"
-                                                value="Andrew">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 pl-1">
-                                        <div class="form-group">
-                                            <label>Postal Code</label>
-                                            <input type="number" class="form-control" placeholder="ZIP Code">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>About Me</label>
-                                            <textarea rows="4" cols="80" class="form-control"
-                                                placeholder="Here can be your description"
-                                                value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                                <div class="row2">
+                                    <p>davidguzhavin@gmail.com</p>
+                                    <p>Активные пакеты:</p>
+                                    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4">
+                                        <div class="col">
+                                            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg "
+                                                style="background-image: url('assets/img/gallery/section_bg03.png');">
+                                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                                    <h3 class="mt-5 mb-4 display-6 lh-1 fw-bold">30 дневный пакет</h3>
+                                                    <h4 class="mt-5 mb-4 display-6 lh-1 fw-bold">02.05.2023-01.06.2023
+                                                    </h4>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -109,6 +48,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="card card-user">
                         <div class="card-body">
@@ -116,20 +56,39 @@
                                 <h2 class="title">QR CODE</h2>
                             </div>
                             <div class="qr-code">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=328x328&data=dasda434235">
+                                <img id="myImg"
+                                    src="https://api.qrserver.com/v1/create-qr-code/?size=328x328&data=dasda434235">
                             </div>
-                        </div>
-                        <hr>
-                        <div class="button-container">
-                            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                                <i class="fab fa-facebook-f"></i>
-                            </button>
-                            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                                <i class="fab fa-twitter"></i>
-                            </button>
-                            <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-                                <i class="fab fa-google-plus-g"></i>
-                            </button>
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                            var modal = document.getElementById("myModal");
+                            
+                            // Get the image and insert it inside the modal - use its "alt" text as a caption
+                            var img = document.getElementById("myImg");
+                            var modalImg = document.getElementById("img01");
+                            var captionText = document.getElementById("caption");
+                            img.onclick = function(){
+                              modal.style.display = "block";
+                              modalImg.src = this.src;
+                              captionText.innerHTML = this.alt;
+                            }
+                            
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+                            
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() { 
+                              modal.style.display = "none";
+                            }
+                            </script>
                         </div>
                     </div>
                 </div>
