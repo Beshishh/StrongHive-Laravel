@@ -10,7 +10,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+    {{--
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
     <link rel="stylesheet" href="assets/css/flaticon.css">
@@ -23,10 +27,12 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+
+
 </head>
 
 <body>
-
     <header>
         <!--? Header Start -->
         <div class="header-area header-transparent">
@@ -58,6 +64,7 @@
                                                 </ul>
                                             </li>
                                             <li><a href="contact">Contact</a></li>
+                                            <li><a href="profile">Profile</a></li>
                                         </ul>
                                     </nav>
                                 </div>
