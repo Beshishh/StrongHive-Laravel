@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\GalleryController;
+<<<<<<< HEAD
 use App\Http\Controllers\NewsController;
+=======
+use App\Http\Controllers\CoachController;
+>>>>>>> 2e5963a0bcb1db8fc785952f3d8c432a583098d9
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -88,7 +92,7 @@ Route::get('/gallerylist', [GalleryController::class,'index']);
 Route::get('/gallerylist', [GalleryController::class,'search']);
 
 
-Route::get('/gallerylist/{gallery}', [GalleryController::class, 'show']);
+Route::get('/detailgallery/{gallery}', [GalleryController::class, 'show']);
 
 Route::get('/addgallery', [GalleryController::class,'create']);
 Route::post('/addgallery', [GalleryController::class,'store']);
@@ -97,4 +101,21 @@ Route::get('/editgallery/{gallery}', [GalleryController::class,'edit']);
 Route::post('/editgallery/{gallery}', [GalleryController::class,'update']);
 
 Route::delete('/gallerylist/{gallery}', [GalleryController::class,'destroy']);
+
+
+
+Route::get('/coachlist', [CoachController::class,'index']);
+
+Route::get('/coachlist', [CoachController::class,'search']);
+
+
+Route::get('/detailcoach/{coach}', [CoachController::class, 'show']);
+
+Route::get('/addcoach', [CoachController::class,'create']);
+Route::post('/addcoach', [CoachController::class,'store']);
+
+Route::get('/editcoach/{coach}', [CoachController::class,'edit']);
+Route::post('/editcoach/{coach}', [CoachController::class,'update']);
+
+Route::delete('/coachlist/{coach}', [CoachController::class,'destroy']);
 

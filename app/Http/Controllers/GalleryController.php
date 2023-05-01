@@ -9,7 +9,7 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        $gallery = News::orderBy('id', 'asc')->get();
+        $gallery = Gallery::orderBy('id', 'asc')->get();
         return view('gallery.index', compact('gallery'));
     }
 
@@ -75,7 +75,7 @@ public function update(Request $request, Gallery $gallery)
         $file->move('../public/assets/img/gallery/', $filename);
     }
 }
-    $news->update($data);
+    $gallery->update($data);
     return redirect('/gallerylist');
 }
 

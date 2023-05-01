@@ -40,16 +40,16 @@
                             <h5 class="card-category">{{$item->id}}</h5>
                                 <h4 class="card-title">{{$item->name}}</h4>
                                 <div class="dropdown">
-                                <form action="{{ url('gallerylist/' . $item->id) }}" method="POST">
                                 <button type="button" class="btn btn-round btn-outline-default dropdown-toggle btn-simple btn-icon no-caret" data-toggle="dropdown">
                                     <i class="now-ui-icons loader_gear"></i>
                                 </button>
+                                <form action="{{ url('gallerylist/' . $item->id) }}" method="POST">
                                 <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#{{url('detailgallery/' .$item->id)}}">View</a>
-                                    <a class="dropdown-item" href="#{{url('editgallery/' .$item->id)}}">Edit</a>
+                                    <a class="dropdown-item" href="{{url('detailgallery/' .$item->id)}}">View</a>
+                                    <a class="dropdown-item" href="{{url('editgallery/' .$item->id)}}">Edit</a>
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
-                                    <a class="dropdown-item text-danger" type="submit">Delete</a>
+                                    <button class="dropdown-item text-danger" onclick="return confirm('Are you sure')" type="submit">Delete</a>
                                 </div>
                                 </div>
                             </div>
