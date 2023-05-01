@@ -4604,6 +4604,10 @@ Created using IcoMoon - icomoon.io
   background-color: #FF7F11;
 }
 
+.card-body .card{
+  background-color: #242423;
+}
+
 .card [data-notify="container"].alert {
   min-width: auto;
   left: unset !important;
@@ -4623,11 +4627,17 @@ Created using IcoMoon - icomoon.io
   padding: 15px 15px 0;
   border: 0;
   color: #FFFFFC;
+  background-color: #FF7F11;
 }
 
-.card .card-header:not([data-background-color]) {
-  background-color: #2e2e2d;
+.card .card-header .title {
+  color: #FFFFFC;
+
 }
+
+/* .card .card-header:not([data-background-color]) {
+  background-color: #2e2e2d;
+} */
 
 .card .card-header .card-title {
   margin-top: 10px;

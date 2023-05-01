@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\NewsController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,6 +59,11 @@ Route::get('/schedule', function () {
 Route::get('/services', function () {
     return view('services');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
 
 
 Route::get('/newslist', [NewsController::class,'index']);

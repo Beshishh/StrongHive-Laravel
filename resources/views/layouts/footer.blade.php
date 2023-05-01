@@ -39,7 +39,8 @@
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p class="info1">GThe trade war currently ensuing between te US anfd several natxions around thdhe globe, most fiercely with.</p>
+                                    <p class="info1">GThe trade war currently ensuing between te US anfd several
+                                        natxions around thdhe globe, most fiercely with.</p>
                                 </div>
                             </div>
                             <!-- Footer Social -->
@@ -58,9 +59,13 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-12">
                         <div class="footer-copy-right text-center">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-JPTVR19 &copy;<script>document.write(new Date().getFullYear());</script>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                JPTVR19 &copy;<script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +75,7 @@ JPTVR19 &copy;<script>document.write(new Date().getFullYear());</script>
     <!-- Footer End-->
 </footer>
 <!-- Scroll Up -->
-<div id="back-top" >
+<div id="back-top">
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
@@ -114,9 +119,11 @@ JPTVR19 &copy;<script>document.write(new Date().getFullYear());</script>
 <script src="./assets/js/mail-script.js"></script>
 <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
+<!-- Jquery Plugins, main Jquery -->
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
 
 </body>
+
 </html>
