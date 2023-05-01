@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +22,14 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/blog_deatils', function () {
+Route::get('/blog_details', function () {
     return view('blog_details');
 });
 
 Route::get('/blog', function () {
     return view('blog');
 });
+
 
 Route::get('/contact', function () {
     return view('contact');
