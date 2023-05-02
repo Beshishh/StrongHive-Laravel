@@ -2030,7 +2030,7 @@ p.description {
 .card-description,
 .footer-big p,
 .card .footer .stats {
-    color: #9a9a9a;
+    color: #fff;
     font-weight: 300;
 }
 
@@ -4946,7 +4946,7 @@ background-color: #2e2e2d;
 }
 
 .card-chart .card-footer .stats {
-    color: #9a9a9a;
+    color: #fff;
 }
 
 .card-chart .dropdown {
