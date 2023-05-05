@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SubscriptionsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -115,4 +116,14 @@ Route::get('/editcoach/{coach}', [CoachController::class,'edit']);
 Route::post('/editcoach/{coach}', [CoachController::class,'update']);
 
 Route::delete('/coachlist/{coach}', [CoachController::class,'destroy']);
+
+
+
+Route::get('/subscriptionslist', [SubscriptionsController::class,'index']);
+
+Route::get('/addsubcription', [SubscriptionsController::class,'create']);
+Route::post('/addsubcription', [SubscriptionsController::class,'store']);
+
+Route::get('/editsubscription/{coach}', [SubscriptionsController::class,'edit']);
+Route::post('/editsubscription/{coach}', [SubscriptionsController::class,'update']);
 
