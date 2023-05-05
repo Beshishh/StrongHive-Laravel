@@ -20,7 +20,7 @@
     <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
         </div>
         <div class="content">
-            <div class="row ml-5 col-md-12 ">
+            <div class="row ml-5 col-md-12">
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">
@@ -70,7 +70,7 @@
                             <script>
                                 // Get the modal
                             var modal = document.getElementById("myModal");
-                            
+                            // create qr code 
                             // Get the image and insert it inside the modal - use its "alt" text as a caption
                             var img = document.getElementById("myImg");
                             var modalImg = document.getElementById("img01");

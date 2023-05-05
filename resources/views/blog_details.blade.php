@@ -1,23 +1,24 @@
 @extends('layouts.main')
 
 @section('main-container')
-   <main>
-      <!--? Hero Start -->
-      <div class="slider-area2">
-         <div class="slider-height2 d-flex align-items-center">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-xl-12">
-                           <div class="hero-cap hero-cap2 pt-70 text-center">
-                              <h2>Blog Details</h2>
-                           </div>
-                     </div>
+<main>
+   <!--? Hero Start -->
+   <div class="slider-area2">
+      <div class="slider-height2 d-flex align-items-center">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="hero-cap hero-cap2 pt-70 text-center">
+                     <h2>Blog Details</h2>
                   </div>
                </div>
+            </div>
          </div>
       </div>
-      <!-- Hero End -->
-      <!--? Blog Area Start -->
+   </div>
+   <!-- Hero End -->
+   <!--? Blog Area Start -->
+   <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
       <section class="blog_area single-post-area section-padding">
          <div class="container">
             <div class="row">
@@ -36,31 +37,37 @@
                         </ul>
                         <p class="excert">
                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                           a
                            fraction of the camp price. However, who has the willpower
                         </p>
                         <p>
                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                           a
                            fraction of the camp price. However, who has the willpower to actually sit through a
                            self-imposed MCSE training. who has the willpower to actually
                         </p>
                         <div class="quote-wrapper">
                            <div class="quotes">
-                              MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                              should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                              MCSE boot camps have its supporters and its detractors. Some people do not understand why
+                              you
+                              should have to spend money on boot camp when you can get the MCSE study materials yourself
+                              at
                               a fraction of the camp price. However, who has the willpower to actually sit through a
                               self-imposed MCSE training.
                            </div>
                         </div>
                         <p>
                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                           a
                            fraction of the camp price. However, who has the willpower
                         </p>
                         <p>
                            MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
+                           a
                            fraction of the camp price. However, who has the willpower to actually sit through a
                            self-imposed MCSE training. who has the willpower to actually
                         </p>
@@ -145,7 +152,8 @@
                               </div>
                               <div class="desc">
                                  <p class="comment">
-                                    Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
+                                    Multiply sea night grass fourth day sea lesser rule open subdue female fill which
+                                    them
                                     Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
                                  </p>
                                  <div class="d-flex justify-content-between">
@@ -171,7 +179,8 @@
                               </div>
                               <div class="desc">
                                  <p class="comment">
-                                    Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
+                                    Multiply sea night grass fourth day sea lesser rule open subdue female fill which
+                                    them
                                     Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
                                  </p>
                                  <div class="d-flex justify-content-between">
@@ -197,7 +206,8 @@
                               </div>
                               <div class="desc">
                                  <p class="comment">
-                                    Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
+                                    Multiply sea night grass fourth day sea lesser rule open subdue female fill which
+                                    them
                                     Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
                                  </p>
                                  <div class="d-flex justify-content-between">
@@ -238,7 +248,8 @@
                            </div>
                            <div class="col-12">
                               <div class="form-group">
-                                 <input class="form-control" name="website" id="website" type="text" placeholder="Website">
+                                 <input class="form-control" name="website" id="website" type="text"
+                                    placeholder="Website">
                               </div>
                            </div>
                         </div>
@@ -426,6 +437,6 @@
          </div>
       </section>
       <!-- Blog Area End -->
-   </main>
+</main>
 
 @endsection
