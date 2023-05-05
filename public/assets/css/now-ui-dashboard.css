@@ -3844,6 +3844,7 @@ font icons
 
 .table > tbody > tr {
     position: relative;
+    color: white; 
 }
 
 .table-shopping > thead > tr > th {
