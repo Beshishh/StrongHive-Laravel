@@ -35,13 +35,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo">
-                                <a href="index"><img src="assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p class="info1">GThe trade war currently ensuing between te US anfd several
-                                        natxions around thdhe globe, most fiercely with.</p>
-                                </div>
+                                <a href=""><img src="assets/img/logo/logo.png" alt=""></a>
                             </div>
                             <!-- Footer Social -->
                             <div class="footer-social ">
@@ -60,11 +54,9 @@
                     <div class="col-lg-12">
                         <div class="footer-copy-right text-center">
                             <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 JPTVR19 &copy;<script>
                                     document.write(new Date().getFullYear());
                                 </script>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
                     </div>

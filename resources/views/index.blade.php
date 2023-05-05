@@ -210,7 +210,7 @@
                             style="background-image: url(assets/img/gallery/gallery1.png);"></div>
                         <div class="overlay">
                             <div class="overlay-content">
-                                <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
+                                <a href="gallery"><i class="ti-arrow-top-right"></i></a>
                                 <h3>Best fitness gallery</h3>
                                 <p>Fitness, Body</p>
                             </div>
@@ -225,7 +225,7 @@
                                     style="background-image: url(assets/img/gallery/gallery2.png);"></div>
                                 <div class="overlay">
                                     <div class="overlay-content">
-                                        <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
+                                        <a href="gallery"><i class="ti-arrow-top-right"></i></a>
                                         <h3>Best fitness gallery</h3>
                                         <p>Fitness, Body</p>
                                     </div>
@@ -238,7 +238,7 @@
                                     style="background-image: url(assets/img/gallery/gallery3.png);"></div>
                                 <div class="overlay">
                                     <div class="overlay-content">
-                                        <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
+                                        <a href="gallery"><i class="ti-arrow-top-right"></i></a>
                                         <h3>Best fitness gallery</h3>
                                         <p>Fitness, Body</p>
                                     </div>
@@ -251,7 +251,7 @@
                                     style="background-image: url(assets/img/gallery/gallery4.png);"></div>
                                 <div class="overlay">
                                     <div class="overlay-content">
-                                        <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
+                                        <a href="gallery"><i class="ti-arrow-top-right"></i></a>
                                         <h3>Best fitness gallery</h3>
                                         <p>Fitness, Body</p>
                                     </div>
@@ -264,7 +264,7 @@
                                     style="background-image: url(assets/img/gallery/gallery5.png);"></div>
                                 <div class="overlay">
                                     <div class="overlay-content">
-                                        <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
+                                        <a href="gallery"><i class="ti-arrow-top-right"></i></a>
                                         <h3>Best fitness gallery</h3>
                                         <p>Fitness, Body</p>
                                     </div>
@@ -939,7 +939,7 @@
                                 </div>
                                 <div class="blog-cap">
                                     <span>Creative derector</span>
-                                    <h3><a href="blog_details.html">Footprints in Time is perfect House in Kurashiki</a>
+                                    <h3><a href="blog_details">Footprints in Time is perfect House in Kurashiki</a>
                                     </h3>
                                 </div>
                             </div>
@@ -958,7 +958,7 @@
                                 </div>
                                 <div class="blog-cap">
                                     <span>Creative derector</span>
-                                    <h3><a href="blog_details.html">Footprints in Time is perfect House in Kurashiki</a>
+                                    <h3><a href="blog_details">Footprints in Time is perfect House in Kurashiki</a>
                                     </h3>
                                 </div>
                             </div>
