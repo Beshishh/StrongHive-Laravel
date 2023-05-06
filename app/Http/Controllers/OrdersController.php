@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\User;
 use App\Models\Orders;
 use Illuminate\Http\Request;
@@ -48,14 +49,16 @@ class OrdersController extends Controller
         'phone' => 'required',
         'email' => 'required',
         'subEnd' => 'required',
-        'qr' => 'required',
     ]);
 
+    $qrCode = QrCode::size(250)->generate('Client: ' . $request->clientName . ', Subscription end: ' . $request->subEnd);
+
     $data = $request->all();
+    $data['qr'] = time() . '.svg';
+    file_put_contents(public_path('qr-codes/' . $data['qr']), $qrCode);
     Orders::create($data);
     return redirect('/orders');
 }
-
 public function edit(Orders $orders)
 {
     {
@@ -83,7 +86,17 @@ public function update(Request $request, Orders $orders)
 
 public function destroy(Orders $orders)
 {
+    // Получаем полный путь к QR-коду
+    $qrCodePath = public_path('qr-codes/' . $orders->qr);
+
+    // Удаляем QR-код
+    if (file_exists($qrCodePath)) {
+        unlink($qrCodePath);
+    }
+
+    // Удаляем заказ
     $orders->delete();
+    
     return redirect('/orders');
 }
 

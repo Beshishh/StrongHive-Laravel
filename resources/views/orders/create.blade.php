@@ -58,12 +58,7 @@
             <input type="date" name="subEnd" class="form-control" placeholder=" ">
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12">
-        <div class="form-group">
-            <strong>qr</strong>
-            <input type="text" name="qr" class="form-control" placeholder=" ">
-        </div>
-    </div>
+
     <div class="form-group">
         <div class="col-sm-offset-3 col-sm-6">
             <button type="submit" class="btn btn-default">

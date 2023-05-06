@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 01 2023 г., 18:45
+-- Время создания: Май 06 2023 г., 17:57
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -64,8 +64,7 @@ CREATE TABLE `gallery` (
 
 INSERT INTO `gallery` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
 (3, 'aboba', 'about.png', '2023-05-01 14:10:40', '2023-05-01 14:10:40'),
-(4, 'abiba', 'about2.png', '2023-05-01 14:10:40', '2023-05-01 14:10:40'),
-(6, 'testedit', 'cUin9RC.png', '2023-05-01 11:26:34', '2023-05-01 12:28:47');
+(4, 'abiba', 'about2.png', '2023-05-01 14:10:40', '2023-05-01 14:10:40');
 
 -- --------------------------------------------------------
 
@@ -114,26 +113,48 @@ CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `orderedSub` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   `totalPrice` int(11) NOT NULL,
   `clientName` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `phone` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `subEnd` date NOT NULL
+  `subEnd` date NOT NULL,
+  `user_id` bigint(20) DEFAULT NULL,
+  `qr` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `orderedSub`, `created_at`, `updated_at`, `totalPrice`, `clientName`, `address`, `phone`, `email`, `subEnd`, `user_id`, `qr`) VALUES
+(1, '30 days', '2023-05-06 12:28:38', '2023-05-06 12:28:38', 10, 'Billy', 'donbass', 54445353, 'donbass@email.com', '2023-05-07', 1, '23423rsdfgdfsg'),
+(8, '1', '2023-05-06 12:52:07', '2023-05-06 12:52:07', 4, '1', '2', 3, '3', '2023-05-05', NULL, '1683388327.svg');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `sub_table`
+-- Структура таблицы `subscriptions`
 --
 
-CREATE TABLE `sub_table` (
+CREATE TABLE `subscriptions` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
   `price` int(11) NOT NULL,
-  `days` int(11) NOT NULL
+  `days` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `subscriptions`
+--
+
+INSERT INTO `subscriptions` (`id`, `name`, `description`, `price`, `days`, `created_at`, `updated_at`) VALUES
+(1, '30 days', 'ka4alo4ka', 10, 30, '2023-05-06 11:43:55', '2023-05-06 11:43:55'),
+(3, '15 days', 'ka4', 5, 15, '2023-05-06 09:02:47', '2023-05-06 09:03:21');
 
 -- --------------------------------------------------------
 
@@ -142,7 +163,7 @@ CREATE TABLE `sub_table` (
 --
 
 CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint(20) NOT NULL,
   `name` varchar(255) NOT NULL,
   `role` enum('admin','client','moderator') DEFAULT NULL,
   `email` varchar(255) NOT NULL,
@@ -190,12 +211,13 @@ ALTER TABLE `news`
 -- Индексы таблицы `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
--- Индексы таблицы `sub_table`
+-- Индексы таблицы `subscriptions`
 --
-ALTER TABLE `sub_table`
+ALTER TABLE `subscriptions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -237,19 +259,29 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT для таблицы `sub_table`
+-- AUTO_INCREMENT для таблицы `subscriptions`
 --
-ALTER TABLE `sub_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `subscriptions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

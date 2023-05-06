@@ -14,7 +14,9 @@
           <p>Client email: {{$orders->email}} </p>
           <p>Client address: {{$orders->address}} </p>
           <p>Client phone: {{$orders->phone}} </p>
-          <p>QR-Code: {{$orders->qr}} </p>
+          <svg width="600" height="320">
+    {!! file_get_contents(public_path('qr-codes/'.$orders->qr)) !!}
+</svg>
           <p class="items-text">Subscription start: {{ $orders->created_at }}</p>
           <p class="items-text">Subscription end: {{ $orders->subEnd }}</p>
           <p><a href="{{ url('/orders') }}" class="btn btn-primary" role="button">Back to list</a></p>
