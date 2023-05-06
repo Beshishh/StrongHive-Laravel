@@ -83,7 +83,7 @@
             </a>
           </li>
           <li>
-            <a href="{{ url('/activesubscriptions') }}">
+            <a href="{{ url('/orders') }}">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>Active subscritpions</p>
             </a>

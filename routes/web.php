@@ -4,6 +4,7 @@ use App\Http\Controllers\CoachController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SubscriptionsController;
+use App\Http\Controllers\OrdersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -129,3 +130,16 @@ Route::post('/editsubscription/{subscriptions}', [SubscriptionsController::class
 
 Route::delete('/subscriptionslist/{subscriptions}', [SubscriptionsController::class,'destroy']);
 
+
+Route::get('/orders', [OrdersController::class,'index']);
+
+Route::get('/orders', [OrdersController::class,'search']);
+
+
+Route::get('/detailorder/{orders}', [OrdersController::class, 'show']);
+
+Route::get('/addorder', [OrdersController::class,'create']);
+Route::post('/addorder', [OrdersController::class,'store']);
+
+
+Route::delete('/orders/{orders}', [OrdersController::class,'destroy']);

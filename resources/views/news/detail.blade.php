@@ -14,7 +14,7 @@
           <p>Description: {{$news->description}} </p>
           <p class="items-text">Created: {{ $news->created_at }}</p>
           <p class="items-text">Updated: {{ $news->updated_at }}</p>
-          <p><a href="{{ url('/newslist') }}" class="btn btn-primary" role="button">Назад</a></p>
+          <p><a href="{{ url('/newslist') }}" class="btn btn-primary" role="button">Back to list</a></p>
     </div>
 </div>
 </div>

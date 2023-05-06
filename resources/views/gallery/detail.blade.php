@@ -13,7 +13,7 @@
     <img src="{{ asset('assets/img/gallery/' .$gallery->image) }}" class="card-thumbnail" alt="{{ $gallery->image }}" width="600" height="320">
           <p class="items-text">Created: {{ $gallery->created_at }}</p>
           <p class="items-text">Updated: {{ $gallery->updated_at }}</p>
-          <p><a href="{{ url('/gallerylist') }}" class="btn btn-primary" role="button">Назад</a></p>
+          <p><a href="{{ url('/gallerylist') }}" class="btn btn-primary" role="button">Back to list</a></p>
     </div>
 </div>
 </div>
