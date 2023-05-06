@@ -124,6 +124,8 @@ Route::get('/subscriptionslist', [SubscriptionsController::class,'index']);
 Route::get('/addsubcription', [SubscriptionsController::class,'create']);
 Route::post('/addsubcription', [SubscriptionsController::class,'store']);
 
-Route::get('/editsubscription/{coach}', [SubscriptionsController::class,'edit']);
-Route::post('/editsubscription/{coach}', [SubscriptionsController::class,'update']);
+Route::get('/editsubscription/{subscriptions}', [SubscriptionsController::class,'edit']);
+Route::post('/editsubscription/{subscriptions}', [SubscriptionsController::class,'update']);
+
+Route::delete('/subscriptionslist/{subscriptions}', [SubscriptionsController::class,'destroy']);
 

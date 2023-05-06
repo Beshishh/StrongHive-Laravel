@@ -8,35 +8,23 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <div class="container">
-                <div class="form-group">
-              <div class="row align-items-end">
-                <div class= "col">
-                  <form>
-                    <div class="row align-items-center ">
-                      <div class = "col-sm-2">
-                        <a href="{{url('/subscriptionslist')}}" title="subscriptions"><i class="btn btn-primary">Clear search</i></a>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-                </div>
-                </div>
                 <h4 class="card-title"> Subscriptions Table</h4>
-                <a href = "addsubscriptions" class ="btn btn-primary btn-sm btn-flat">
+                <a href = "addsubcription" class ="btn btn-primary btn-sm btn-flat">
                 <i class="fa fa-plus"></i>New<a>
               <div class="card-body">
               </div>
                 <div class="table-responsive">
-                @if (count ($subscription ?? '') > 0)
+                @if (count ($subscriptions ?? '') > 0)
                   <table class="table">
                     <thead class=" text-primary">
                     <th>
                         NN
                       </th>
                       <th>
-                        Name
+                        Title
+                      </th>
+                      <th>
+                      Description
                       </th>
                       <th>
                         Price
@@ -49,23 +37,26 @@
                       </th>
                     </thead>
                     <tbody>
-                    @foreach ($subscription as $subscription)
+                    @foreach ($subscriptions as $subscriptions)
                       <tr>
                         <td>
-                          {{ $subscription->id }}
+                          {{ $subscriptions->id }}
                         </td>
                         <td>
-                          {{ $subscription->title }}
+                          {{ $subscriptions->name }}
                         </td>
                         <td>
-                          {{ $subscription->price }}
+                        {{ \Illuminate\Support\Str::limit($subscriptions->description, 30) }}
                         </td>
                         <td>
-                          {{ $subscription->days }}
+                          {{ $subscriptions->price }}
                         </td>
                         <td>
-                          <form action="{{ url('subscriptionslist/' . $subscription->id) }}" method="POST">
-                            <a href="{{url('editsubscriptions/' .$subscription->id)}}" title="edit"><i class="fa fa-btn fa-edit"></i></a>
+                          {{ $subscriptions->days }}
+                        </td>
+                        <td>
+                          <form action="{{ url('subscriptionslist/' . $subscriptions->id) }}" method="POST">
+                            <a href="{{url('editsubscription/' .$subscriptions->id)}}" title="edit"><i class="fa fa-btn fa-edit"></i></a>
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button onclick="return confirm('Are you sure')" type="submit" class="btn btn-link">

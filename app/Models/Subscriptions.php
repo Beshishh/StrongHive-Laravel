@@ -14,6 +14,7 @@ class Subscriptions extends Model
 
     protected $fillable = [
         'name',
+        'description',
         'price',
         'days',
         'created_at',
