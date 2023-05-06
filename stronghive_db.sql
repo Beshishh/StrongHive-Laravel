@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 06 2023 г., 17:57
+-- Время создания: Май 06 2023 г., 20:09
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -129,7 +129,6 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `orderedSub`, `created_at`, `updated_at`, `totalPrice`, `clientName`, `address`, `phone`, `email`, `subEnd`, `user_id`, `qr`) VALUES
-(1, '30 days', '2023-05-06 12:28:38', '2023-05-06 12:28:38', 10, 'Billy', 'donbass', 54445353, 'donbass@email.com', '2023-05-07', 1, '23423rsdfgdfsg'),
 (8, '1', '2023-05-06 12:52:07', '2023-05-06 12:52:07', 4, '1', '2', 3, '3', '2023-05-05', NULL, '1683388327.svg');
 
 -- --------------------------------------------------------
@@ -165,7 +164,7 @@ INSERT INTO `subscriptions` (`id`, `name`, `description`, `price`, `days`, `crea
 CREATE TABLE `users` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `role` enum('admin','client','moderator') DEFAULT NULL,
+  `role` enum('admin','client','manager') DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -271,7 +270,7 @@ ALTER TABLE `subscriptions`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

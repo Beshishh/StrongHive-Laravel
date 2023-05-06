@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoachController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubscriptionsController;
 use App\Http\Controllers\OrdersController;
 use Illuminate\Support\Facades\Route;
@@ -143,3 +144,17 @@ Route::post('/addorder', [OrdersController::class,'store']);
 
 
 Route::delete('/orders/{orders}', [OrdersController::class,'destroy']);
+
+
+
+Route::get('/userslist', [UserController::class,'index']);
+
+Route::get('/userslist', [UserController::class,'search']);
+
+Route::get('/adduser', [UserController::class,'create']);
+Route::post('/adduser', [UserController::class,'store']);
+
+Route::get('/edituser/{users}', [UserController::class,'edit']);
+Route::post('/edituser/{users}', [UserController::class,'update']);
+
+Route::delete('/userslist/{users}', [UserController::class,'destroy']);

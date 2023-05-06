@@ -59,9 +59,16 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
           <li>
-            <a href="{{ url('/users') }}">
+            <a href="{{ url('/dashboard') }}">
               <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+          <li>
+            <a href="{{ url('/userslist') }}">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Users list</p>
             </a>
           </li>
           <li>

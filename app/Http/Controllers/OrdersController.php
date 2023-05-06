@@ -86,15 +86,11 @@ public function update(Request $request, Orders $orders)
 
 public function destroy(Orders $orders)
 {
-    // Получаем полный путь к QR-коду
     $qrCodePath = public_path('qr-codes/' . $orders->qr);
 
-    // Удаляем QR-код
     if (file_exists($qrCodePath)) {
         unlink($qrCodePath);
     }
-
-    // Удаляем заказ
     $orders->delete();
     
     return redirect('/orders');
