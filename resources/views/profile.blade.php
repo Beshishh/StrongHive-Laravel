@@ -34,7 +34,7 @@
                                     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4">
                                         <div class="col">
                                             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg "
-                                                style="background-image: url('assets/img/gallery/section_bg03.png');">
+                                                style="background-image: url('{{ asset('assets/img/gallery/' .$item->image) }}');">
                                                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                                                     <h3 class="mt-5 mb-4 display-6 lh-1 fw-bold">30 дневный пакет</h3>
                                                     <h4 class="mt-5 mb-4 display-6 lh-1 fw-bold">02.05.2023-01.06.2023
@@ -70,7 +70,7 @@
                             <script>
                                 // Get the modal
                             var modal = document.getElementById("myModal");
-                            // create qr code 
+                            // create qr code
                             // Get the image and insert it inside the modal - use its "alt" text as a caption
                             var img = document.getElementById("myImg");
                             var modalImg = document.getElementById("img01");
@@ -80,12 +80,12 @@
                               modalImg.src = this.src;
                               captionText.innerHTML = this.alt;
                             }
-                            
+
                             // Get the <span> element that closes the modal
                             var span = document.getElementsByClassName("close")[0];
-                            
+
                             // When the user clicks on <span> (x), close the modal
-                            span.onclick = function() { 
+                            span.onclick = function() {
                               modal.style.display = "none";
                             }
                             </script>

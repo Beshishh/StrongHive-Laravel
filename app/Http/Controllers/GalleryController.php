@@ -14,19 +14,19 @@ class GalleryController extends Controller
     }
 
     public function show(Gallery $gallery)
-    {  
+    {
         return view('gallery.detail', compact('gallery'));
     }
-    
-    
+
+
     public function search(Gallery $gallery)
-    {  
+    {
         if (request('search')) {
             $gallery = Gallery::where('name', 'like', '%' . request('search') . '%')->get();
         } else {
             $gallery = Gallery::all();
         }
-    
+
         return view('gallery.index', compact('gallery'));
     }
 
@@ -84,5 +84,19 @@ public function destroy(Gallery $gallery)
     $gallery->delete();
     return redirect('/gallerylist');
 }
+
+public function galleryLimit()
+{
+    $galleryLimit = Gallery::orderBy('id', 'asc')->take(5)->get();
+    return view('index', compact('galleryLimit'));
+}
+
+public function galleryList()
+{
+    $galleryList = Gallery::orderBy('id', 'asc')->get();
+    return view('gallery', compact('galleryList'));
+}
+
+
 
 }

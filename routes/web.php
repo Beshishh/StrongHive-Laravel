@@ -22,6 +22,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/', [GalleryController::class,'galleryLimit']);
+
+
+
+
 
 Route::get('/about', function () {
     return view('about');
@@ -53,6 +58,7 @@ Route::get('/from', function () {
 Route::get('/gallery', function () {
     return view('gallery');
 });
+Route::get('/gallery', [GalleryController::class,'galleryList']);
 
 
 Route::get('/schedule', function () {

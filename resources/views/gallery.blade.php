@@ -22,70 +22,14 @@
         <div class="gallery-area section-padding30">
             <div class="container-fluid p-0 fix">
                 <div class="row">
+                @foreach($galleryList as $item)
                     <div class="col-lg-6">
                         <div class="box snake mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/gallery1.png);"></div>
-                            <div class="overlay">
-                                <div class="overlay-content">
-                                    <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
-                                    <h3>Best fitness gallery</h3>
-                                    <p>Fitness, Body</p>
-                                </div>
-                            </div>
+                        // open image by click in fullscreen modal
+                            <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/{{ $item->image }});"></div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box snake mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery2.png);"></div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
-                                            <h3>Best fitness gallery</h3>
-                                            <p>Fitness, Body</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box snake mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery3.png);"></div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
-                                            <h3>Best fitness gallery</h3>
-                                            <p>Fitness, Body</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box snake mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery4.png);"></div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
-                                            <h3>Best fitness gallery</h3>
-                                            <p>Fitness, Body</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box snake mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(assets/img/gallery/gallery5.png);"></div>
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="gallery.html"><i class="ti-arrow-top-right"></i></a>
-                                            <h3>Best fitness gallery</h3>
-                                            <p>Fitness, Body</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

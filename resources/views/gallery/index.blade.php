@@ -33,7 +33,7 @@
             <i class="fa fa-plus"></i>New</a>
           <div class="row">
             <div class="card-body">
-              <div class="table-responsive d-flex justify-content-between flex-wrap">
+              <div class="table-responsive d-flex justify-content-start flex-wrap">
                 @if(count($gallery ?? '') > 0)
                 @foreach($gallery as $item)
                 <div class="col-lg-3 d-inline-block">
