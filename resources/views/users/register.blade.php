@@ -26,8 +26,11 @@
                         <input type="password" class="form-control" name="password_confirmation" placeholder="Password confirmation" required="" />
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-default submit" name="login">Log in</button>
+                        <button type="submit" class="btn btn-default submit" name="login">Register</button>
                     </div>
+                    <p class="change_link">
+                            <a href="{{url('/')}}"> Back to main page </a>
+                        </p>
                     <div class="clearfix"></div>
                     <div class="separator">
                         <div class="clearfix"></div>

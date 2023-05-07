@@ -16,7 +16,7 @@
                 <form action="{{url('login')}}" method="POST">
                     @csrf
                     <div class="login-form-header">
-                        <h1>Login Form</h1>
+                        <h1>StrongHive</h1>
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" name="email" placeholder="Email" required="" />
@@ -31,6 +31,9 @@
                     <div class="separator">
                         <p class="change_link">New to site?
                             <a href="{{url('register')}}" class="to_register"> Create Account </a>
+                        </p>
+                        <p class="change_link">
+                            <a href="{{url('/')}}"> Back to main page </a>
                         </p>
                         <div class="clearfix"></div>
                         <br />

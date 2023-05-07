@@ -9,8 +9,10 @@
             <div class="card">
               <div class="card-header">
                 <h4 class="card-title"> Edit User</h4>
+                @if (Auth::user()->role == 'admin')
                 <a href = "/userslist" class ="btn btn-primary btn-sm btn-flat">
                 <i class="fa fa-backward"></i>Back to list<a>
+                @endif
               <div class="card-body">
               </div>
               @include('common.errors')

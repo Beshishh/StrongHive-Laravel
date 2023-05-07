@@ -16,11 +16,27 @@
               </div>
                 </div>
                 </div>
-                <h4 class="card-title"> Welcome, {{Auth::user()->name}}</h4>
+                <h4 class="card-title"> Welcome to Admin panel</h4>
               <div class="card-body">
               </div>
                 <div class="table-responsive">
-                
+                <div>
+                @can ('isAdmin')
+                <h4> You are logged in as an Admin</h4>
+                </div>
+                <div>
+                @elsecan ('isManager')
+                <h4> You are logged in as an Manager</h4>
+                </div>
+                <div>
+                @elsecan ('isClient')
+                <h4> You are logged in as an Client</h4>
+                </div>
+                <div>
+                @else
+                <h4> You are not logged in</h4>
+                </div>
+                @endcan
             </div>
           </div>
             </div>

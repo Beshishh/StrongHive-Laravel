@@ -58,6 +58,7 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
+          @if(Gate :: allows('isAdmin') || Gate :: allows('isManager'))
           <li>
             <a href="{{ url('/dashboard') }}">
               <i class="now-ui-icons users_single-02"></i>
@@ -65,16 +66,29 @@
             </a>
           </li>
           <li>
-          <li>
-            <a href="{{ url('/userslist') }}">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>Users list</p>
+            <a href="{{ url('/gallerylist') }}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Gallery</p>
             </a>
           </li>
           <li>
             <a href="{{ url('/newslist') }}">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>News List</p>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url('/orders') }}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Active subscritpions</p>
+            </a>
+          </li>
+          @endif
+          @if(Gate :: allows('isAdmin'))
+          <li>
+            <a href="{{ url('/userslist') }}">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Users list</p>
             </a>
           </li>
           <li>
@@ -89,19 +103,7 @@
               <p>Subscriptions List</p>
             </a>
           </li>
-          <li>
-            <a href="{{ url('/orders') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Active subscritpions</p>
-            </a>
-          </li>
-          </li>
-          <li>
-            <a href="{{ url('/gallerylist') }}">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Gallery</p>
-            </a>
-          </li>
+          @endif
         </ul>
       </div>
     </div>
