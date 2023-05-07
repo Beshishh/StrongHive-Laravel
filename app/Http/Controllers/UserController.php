@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Hash;
+use Auth;
 
 class UserController extends Controller
 {
@@ -65,7 +66,7 @@ public function update(Request $request, User $users)
     $request->validate([
         'name' => 'required|string|max:255',
     ]);
-
+    if(!isset($request->role)) $request->role=Auth::user()->role;
     if($request->password) {
         $request->validate([
             'password' => 'required|string|min:8|confirmed',
@@ -91,4 +92,27 @@ public function destroy(User $users)
     return redirect('/userslist');
 }
 
+public function form_register()
+{
+    $role = array('admin', 'manager', 'client');
+    return view('users.register', compact('role'));
+}
+
+public function store_register(Request $request)
+{
+$request->validate([
+    'name' => 'required|string|max:255',
+    'email' => 'required|string|email|max:255|unique:users',
+    'password' => 'required|string|min:8|confirmed',
+    'password_confirmation' => 'required',
+]);
+
+User::create([
+    'name' => $request->name,
+    'email' => $request->email,
+    'password' => Hash::make($request->password),
+    'role' => $request->role ?? 'client',
+]);
+return view('users.registerresult');
+}
 }

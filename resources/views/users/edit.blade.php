@@ -37,12 +37,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Role:</strong>
-            <select class = "form-control" name="role">
-                @foreach ($role as $role)
-                <option value = "{{ $role }}"
-                    @if($role=='user') selected @endif> {{ $role }} </option
-                >@endforeach
-                </select>
+            <select class="form-control" name="role" {{ (Auth::user()->role !== 'admin') ? 'disabled' : '' }}>
+    @foreach ($role as $role)
+        <option value="{{ $role }}" {{ ($role == $users->role) ? 'selected' : '' }}>{{ $role }}</option>
+    @endforeach
+</select>
         </div>
     </div>
     <div class="form-group">
