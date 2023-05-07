@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 06 2023 г., 20:09
+-- Время создания: Май 07 2023 г., 16:17
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -164,7 +164,7 @@ INSERT INTO `subscriptions` (`id`, `name`, `description`, `price`, `days`, `crea
 CREATE TABLE `users` (
   `id` bigint(20) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `role` enum('admin','client','manager') DEFAULT NULL,
+  `role` enum('admin','client','manager') DEFAULT 'client',
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -176,7 +176,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin', 'admin@nowui.com', '$2y$10$EnkFyckRxS0iVvEIPeQ4b.yi2IgEYQnX3WMUtLGVnLU6OAa7mDM8C', '2023-04-28 13:57:50', '2023-04-28 13:57:50');
+(3, 'manager', 'manager', 'test2@test.ee', '$2y$10$orxi.q8tason/AaqCz08HOec/5GwQ4F/8yyuQNiI.p5B7xBrgPhJe', '2023-05-07 08:49:20', '2023-05-07 09:03:43'),
+(4, 'admin', 'admin', 'admin@test.ee', '$2y$10$ZuNACb7Egewt9qByzWQy6.AH7cw/AFSPhLryRwEkTjlyiouZM8DZe', '2023-05-07 09:04:03', '2023-05-07 09:04:03'),
+(5, 'client', 'client', 'client@test.ee', '$2y$10$SalqDYZg7tBA3xZ.4T2uc.FjtZLLVu7d/r.wzszgZyizbFA8SIMay', '2023-05-07 09:05:45', '2023-05-07 09:05:45');
 
 --
 -- Индексы сохранённых таблиц
@@ -264,13 +266,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT для таблицы `subscriptions`
 --
 ALTER TABLE `subscriptions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
