@@ -18,10 +18,18 @@ class AuthController extends Controller
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
-        
+
         $credentials = $request->only('email', 'password');
         if(Auth::attempt($credentials)){
-            return redirect()->intended('dashboard');
+            if(Auth::user()->role == 'admin'){
+                return redirect()->intended('dashboard');
+            }
+            if(Auth::user()->role == 'manager'){
+                return redirect()->intended('dashboard');
+            }
+            if(Auth::user()->role == 'client'){
+                return redirect()->intended('');
+            }
         }
         return redirect('login')->with('error' , 'The provided credentials do not match our records.');
     }
