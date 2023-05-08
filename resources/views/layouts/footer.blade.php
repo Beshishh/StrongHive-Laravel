@@ -54,7 +54,7 @@
                     <div class="col-lg-12">
                         <div class="footer-copy-right text-center">
                             <p>
-                                JPTVR19 &copy;<script>
+                                IVKHK &copy;<script>
                                     document.write(new Date().getFullYear());
                                 </script>
                             </p>
@@ -81,6 +81,7 @@
 <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
 <script src="./assets/js/popper.min.js"></script>
 <script src="./assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 <!-- Jquery Mobile Menu -->
 <script src="./assets/js/jquery.slicknav.min.js"></script>
 
