@@ -25,7 +25,6 @@
                 @foreach($galleryList as $item)
                     <div class="col-lg-6">
                         <div class="box snake mb-30">
-                        // open image by click in fullscreen modal
                             <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/{{ $item->image }});"></div>
                         </div>
                     </div>
