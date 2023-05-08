@@ -350,7 +350,7 @@ Copyright (c) 2015 Daniel Eden
     border-radius: 0.1875rem;
     padding: 11px 22px;
     cursor: pointer;
-    background-color: #888;
+    background-color: #FF7F11;
     color: #ffffff;
 }
 
@@ -376,7 +376,7 @@ Copyright (c) 2015 Daniel Eden
 .show > .navbar .navbar-nav > a.btn.dropdown-toggle,
 .show > .navbar .navbar-nav > a.btn.dropdown-toggle:focus,
 .show > .navbar .navbar-nav > a.btn.dropdown-toggle:hover {
-    background-color: #979797;
+    background-color: #FF3F00;
     color: #ffffff;
     box-shadow: none;
     border-color: #979797;
@@ -1324,7 +1324,7 @@ fieldset[disabled] .btn-link.active {
     background-color: transparent;
     border: 1px solid #e3e3e3;
     border-radius: 30px;
-    color: #2c2c2c;
+    color: #FFFFFC;
     line-height: normal;
     height: auto;
     font-size: 0.8571em;
@@ -1347,7 +1347,7 @@ fieldset[disabled] .btn-link.active {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: 0 !important;
-    color: #2c2c2c;
+    color: #242423;
 }
 
 .form-control:focus + .input-group-append .input-group-text,
@@ -3844,7 +3844,7 @@ font icons
 
 .table > tbody > tr {
     position: relative;
-    color: white; 
+    color: white;
 }
 
 .table-shopping > thead > tr > th {
@@ -4411,6 +4411,8 @@ font icons
 
 .footer {
     padding: 24px 0;
+    color: #FFFFFC;
+    background-color: #323231;
 }
 
 .footer.footer-default {
@@ -6190,3 +6192,18 @@ background-color: #2e2e2d;
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
+
+.login-register body{
+    color: #242423;
+}
+.login-register h1{
+    font-size: 3.5em;
+    line-height: 1.15;
+    margin-bottom: 30px;
+    color: #FFFFFC;
+}
+.login-register p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #FFFFFC;
+}
