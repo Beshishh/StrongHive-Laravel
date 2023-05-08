@@ -64,16 +64,17 @@
                                                 </ul>
                                             </li>
                                             <li><a href="contact">Contact</a></li>
-                                            <li><a href="profile">Profile</a></li>
+
                                             @if (Auth::check())
+                                                <li><a href="{{ url('/profile')}}">Profile</a></li>
                                                 <li><a href="{{ url('/logout') }}">Logout</a></li>
                                             @else
-                                                <li><a href="{{ url('/start') }}">Sign in</a></li>
+                                                <li><a href="{{ url('/start') }}">Login</a></li>
                                                 <li><a href="{{ url('/register') }}">Sign up</a></li>
                                             @endif
                                             @if(Gate :: allows('isAdmin') || Gate :: allows('isManager'))
                                             <li><a href="{{ url ('/dashboard') }}">Admin</a></li>
-                                            @endif 
+                                            @endif
                                         </ul>
                                     </nav>
                                 </div>
