@@ -102,7 +102,10 @@ Route::group(['middleware' => ['auth']], function (){
 
         });    // Route::group(['middleware' => ['auth']], function (){
 
-Route::get('/', [GalleryController::class,'galleryLimit']);
+Route::get('/', [Controller::class,'IndexController']);
+
+
+
 
 
 Route::get('/about', function () {
@@ -116,6 +119,7 @@ Route::get('/blog_details', function () {
 Route::get('/blog', function () {
     return view('blog');
 });
+Route::get('/blog', [Controller::class,'newsList']);
 
 
 Route::get('/contact', function () {
@@ -150,6 +154,10 @@ Route::get('/services', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::get('/profile', [OrdersController::class,'profileSub']);
+
+
+
 
 
 
