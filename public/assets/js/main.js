@@ -1,6 +1,6 @@
 (function ($)
   { "use strict"
-  
+
 /* 1. Proloder */
     $(window).on('load', function () {
       $('#preloader-active').delay(450).fadeOut('slow');
@@ -28,7 +28,7 @@
       }, 800);
       return false;
     });
-  
+
 
 /* 3. slick Nav */
 // mobile_menu
@@ -58,7 +58,7 @@
         autoplaySpeed: 5000,
         dots: false,
         fade: true,
-        arrows: false, 
+        arrows: false,
         prevArrow: '<button type="button" class="slick-prev"><i class="ti-angle-left"></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="ti-angle-right"></i></button>',
         responsive: [{
@@ -168,7 +168,7 @@
 /* 10. WOW active */
     new WOW().init();
 
-// 11. ---- Mailchimp js --------//  
+// 11. ---- Mailchimp js --------//
     function mailChimp() {
       $('#mc_embed_signup').find('form').ajaxChimp();
     }
@@ -211,6 +211,39 @@
   });
 
 })(jQuery);
+
+(function () {
+    "use strict";
+
+    var carousels = function () {
+        $(".owl-carousel1").owlCarousel({
+            loop: true,
+            center: true,
+            margin: 25,
+            responsiveClass: true,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                680: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                },
+                1000: {
+                    items: 3,
+                    nav: false
+                },
+            }
+        });
+    };
+
+    (function ($) {
+        carousels();
+    })(jQuery);
+})();
 
 
 

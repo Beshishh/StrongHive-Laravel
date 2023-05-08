@@ -243,69 +243,37 @@
         <div class="team-area pb-150">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team1.png" alt="">
-                                <div class="team-caption">
-                                    <span>Creative derector</span>
-                                    <h3><a href="#">Jhon Sunsaev</a></h3>
-                                    <!-- Blog Social -->
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
+                    <div class="gtco-testimonials">
+                        <div class="owl-carousel owl-carousel1 owl-theme">
+                            @foreach ($coach as $coaches)
+                            <div class="col-lg-12 col-md-7 col-sm-6">
+                                <div class="single-team mb-30">
+                                    <div class="team-img">
+                                   <img src="assets/img/coaches/{{ $coaches->image}}" alt="">
+                                        <div class="team-caption">
+
+                                            <h3><a href="#">{{ $coaches->firstname }} {{ $coaches->lastname }}</a></h3>
+                                            <span>{{ $coaches->description }}</span>
+                                            <!-- Blog Social -->
+                                            <div class="team-social">
+                                                <ul>
+                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team2.png" alt="">
-                                <div class="team-caption">
-                                    <span>Creative derector</span>
-                                    <h3><a href="#">Jhon Sunsaev</a></h3>
-                                    <!-- Blog Social -->
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-team mb-30">
-                            <div class="team-img">
-                                <img src="assets/img/gallery/team3.png" alt="">
-                                <div class="team-caption">
-                                    <span>Creative derector</span>
-                                    <h3><a href="#">Jhon Sunsaev</a></h3>
-                                    <!-- Blog Social -->
-                                    <div class="team-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <!-- Team Ara End -->
         <!--? Want To work -->
         {{-- <section class="wantToWork-area w-padding section-bg"

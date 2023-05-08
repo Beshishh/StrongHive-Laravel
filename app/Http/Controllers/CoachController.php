@@ -14,19 +14,19 @@ class CoachController extends Controller
     }
 
     public function show(Coach $coach)
-    {  
+    {
         return view('coach.detail', compact('coach'));
     }
-    
-    
+
+
     public function search(Coach $coach)
-    {  
+    {
         if (request('search')) {
             $coach = Coach::where('firstname', 'like', '%' . request('search') . '%')->get();
         } else {
             $coach = Coach::all();
         }
-    
+
         return view('coach.index', compact('coach'));
     }
 
@@ -88,5 +88,7 @@ public function destroy(Coach $coach)
     $coach->delete();
     return redirect('/coachlist');
 }
+
+
 
 }

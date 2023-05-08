@@ -85,18 +85,5 @@ public function destroy(Gallery $gallery)
     return redirect('/gallerylist');
 }
 
-public function galleryLimit()
-{
-    $galleryLimit = Gallery::orderBy('id', 'asc')->take(5)->get();
-    return view('index', compact('galleryLimit'));
-}
-
-public function galleryList()
-{
-    $galleryList = Gallery::orderBy('id', 'asc')->get();
-    return view('gallery', compact('galleryList'));
-}
-
-
 
 }
