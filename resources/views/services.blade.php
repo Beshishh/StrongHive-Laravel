@@ -10,7 +10,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 text-center pt-70">
-                                <h2>our Services</h2>
+                                <h2>our offers</h2>
                             </div>
                         </div>
                     </div>
@@ -38,91 +38,38 @@
             </section>
             <!-- Want To work End --> --}}
             <div class="container">
+            @if (session('error'))
+                <div class="alert alert-danger">{{ session('error') }}</div>
+            @endif
+
+            @if (session('success'))
+                <div class="alert alert-success">{{ session('success') }}</div>
+            @endif
+            @if (count ($subscriptions ?? '') > 0)
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat single-cat2 text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-fitness"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">QUALITY EQUIPMENT</a></h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                            </div>
+                @foreach ($subscriptions as $subscriptions)
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <i class="flaticon-fitness"></i>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat single-cat2 text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-healthcare-and-medical"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">health caring</a></h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                            </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">{{ $subscriptions->name }}</a></h5>
+                            <p>{{ $subscriptions->description }}</p>
+                            <h2>{{ $subscriptions->price }}€ </h2>
+
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat single-cat2 text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-clock"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">gym strategies</a></h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                            </div>
+                        <div class="img-cap">
+                            <a href="{{ url('createorder/' .$subscriptions->id) }}" class="">Order your subscription <i class="ti-arrow-right"></i></a>
                         </div>
+                        {{ csrf_field() }}
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat single-cat2 text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-healthcare-and-medical"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">health caring</a></h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat single-cat2 text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-clock"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">gym strategies</a></h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat single-cat2 text-center mb-50">
-                            <div class="cat-icon">
-                                <i class="flaticon-fitness"></i>
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.html">QUALITY EQUIPMENT</a></h5>
-                                <p>The sea freight service has grown consider ably in recent years. We spend timetting to kn.</p>
-                            </div>
-                            <div class="img-cap">
-                                <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                @endforeach
+                @else
+                    <p>Data not found</p>
+                    @endif
+                </div>
                 </div>
             </div>
         </section>

@@ -23,6 +23,14 @@ class Orders  extends Model
         'email',
         'subEnd',
         'user_id',
+        'sub_id',
         'qr',
     ];
+
+    public function subscriptions()
+    {
+        return $this->belongsTo('App\Models\Subscriptions');
+    }
+    
+
 }

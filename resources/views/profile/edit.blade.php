@@ -55,6 +55,11 @@
                                 <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Save</button>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" href ="/profile">Back</button>
+                                </div>
+                            </div>
                         </form>
                         </div>
                     </div>

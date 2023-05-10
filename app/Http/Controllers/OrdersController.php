@@ -112,4 +112,6 @@ class OrdersController extends Controller
         return view('profile', compact('qr'));
     } */
 
+
+
 }

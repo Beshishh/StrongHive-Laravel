@@ -20,4 +20,9 @@ class Subscriptions extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function ordersubscription()
+    {
+        return $this->hasMany('App\Models\Orders');
+    }
 }
