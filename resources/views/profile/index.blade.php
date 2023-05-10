@@ -28,8 +28,11 @@
                                 <div class="card-block text-center text-white">
                                     <div class="m-b-25">
 
-
+                                    @if($qr)
                                         <img src="{{ asset('qr-codes/' . $qr) }}" alt="QR Code" id="myImg">
+                                        @else
+                            <p></p>
+                            @endif
                                     </div>
                                     <!-- The Modal -->
                                     <div id="myModal" class="modal">
@@ -77,14 +80,21 @@
                                             <p class="m-b-10 f-w-600">Email</p>
                                             <h6 class="text-muted f-w-400">{{ Auth::user()->email }}</h6>
                                         </div>
+                                        <form action="{{ url('profile/' .Auth::user()->id) }}" method="GET">
+                                        {{ csrf_field() }}
+                                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" title="edit">Edit Profile</button>
+                                        </form>
                                     </div>
                                     <h6 class="m-b-20 m-t-40 p-b-5 b-b-default text-center f-w-600">Subsciption</h6>
                                     <div class="row text-center">
-                                        <div class="col-sm-12">
-
-                                            <h6 class="m-b-10 f-w-600"></p>
-                                            <h6 class="text-muted f-w-400">{{ $subStart }} - {{ $subEnd }}</h6>
-                                        </div>
+                                    <div class="col-sm-12">
+                                        <h6 class="m-b-10 f-w-600"></p>
+                                        @if($subStart && $subEnd)
+                                            <h6 class="text-muted f-w-400">{{ $subStart->format('Y-m-d') }} - {{ $subEnd }}</h6>
+                                        @else
+                                            <p>No active subscription</p>
+                                        @endif
+                                    </div>
                                     </div>
                                 </div>
                             </div>

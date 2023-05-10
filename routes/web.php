@@ -96,9 +96,14 @@ Route::group(['middleware' => ['auth']], function (){
 
         }); // end Route::middleware('admin')->group(function () {
 
-            Route::get('/profile/{users}', [UserController::class,'edit']);
+            Route::get('/profile/{users}', [UserController::class,'profile_edit']);
+            Route::post('/profile/{users}', [UserController::class,'profile_update']);
             Route::get('/edituser/{users}', [UserController::class,'edit']);
             Route::post('/edituser/{users}', [UserController::class,'update']);
+            Route::get('/profile', function () {
+                return view('profile');
+            });
+            Route::get('/profile', [OrdersController::class,'profileSub']);
 
         });    // Route::group(['middleware' => ['auth']], function (){
 
@@ -151,10 +156,7 @@ Route::get('/services', function () {
     return view('services');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/profile', [OrdersController::class,'profileSub']);
+
 
 
 

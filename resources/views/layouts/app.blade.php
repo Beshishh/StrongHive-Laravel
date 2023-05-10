@@ -139,7 +139,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="{{ url('/') }}">Back to main page</a>
-                  <a class="dropdown-item" href="#">Edit profile</a>
+                  <a class="dropdown-item" href="{{url('edituser/' .Auth::user()->id)}}">Edit profile</a>
                   <a class="dropdown-item" href="{{ url('/logout')}}">Log out</a>
                 </div>
               </li>

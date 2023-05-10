@@ -115,4 +115,37 @@ User::create([
 ]);
 return view('users.registerresult');
 }
+
+public function profile_edit()
+{
+    $users = User::findOrFail(Auth::user()->id);
+    $role = array('admin', 'manager', 'client');
+    return view('profile.edit', compact('users', 'role'));
+}
+
+public function profile_update(Request $request)
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+    ]);
+    $user = User::findOrFail(Auth::user()->id);
+    if(!isset($request->role)) $request->role=Auth::user()->role;
+    if($request->password) {
+        $request->validate([
+            'password' => 'required|string|min:8|confirmed',
+            'password_confirmation' => 'required',
+        ]);
+        $user->update ([
+            'name' => $request->name,
+            'password' => Hash::make($request->password),
+        ]);
+    }else{
+        $user->update ([
+            'name' => $request->name,
+        ]);
+    }
+    return redirect('/profile');
+}
+
+
 }

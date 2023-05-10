@@ -100,10 +100,10 @@ class OrdersController extends Controller
 
     public function profileSub(){
         $id = Auth::id();
-        $subStart = Orders::where('user_id', $id)->value('created_at')->format('Y-m-d');
+        $subStart = Orders::where('user_id', $id)->value('created_at');
         $subEnd = Orders::where('user_id', $id)->value('subEnd');
         $qr = Orders::where('user_id', $id)->value('qr');
-        return view('profile', compact(array('subStart', 'subEnd', 'qr')));
+        return view('profile.index', compact(array('subStart', 'subEnd', 'qr')));
     }
 /*
     public function profileQr(){
