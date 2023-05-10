@@ -100,7 +100,6 @@ Route::group(['middleware' => ['auth']], function (){
             Route::post('/profile/{users}', [UserController::class,'profile_update']);
             Route::get('/edituser/{users}', [UserController::class,'edit']);
             Route::post('/edituser/{users}', [UserController::class,'update']);
-            Route::get('/services', [SubscriptionsController::class,'pricelist']);
             Route::get('/createorder/{subscriptions}', [SubscriptionsController::class,'orderscreate']);
             Route::post('/createorder/{subscriptions}', [SubscriptionsController::class,'orderstore']);
             Route::get('/profile', function () {
@@ -123,6 +122,8 @@ Route::get('/about', function () {
 Route::get('/blog_details', function () {
     return view('blog_details');
 });
+
+Route::get('/services', [SubscriptionsController::class,'pricelist']);
 
 Route::get('/blog', function () {
     return view('blog');
