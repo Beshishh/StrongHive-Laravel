@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 07 2023 г., 16:17
+-- Время создания: Май 10 2023 г., 20:39
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -121,6 +121,7 @@ CREATE TABLE `orders` (
   `email` varchar(255) NOT NULL,
   `subEnd` date NOT NULL,
   `user_id` bigint(20) DEFAULT NULL,
+  `sub_id` int(11) NOT NULL,
   `qr` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -128,8 +129,8 @@ CREATE TABLE `orders` (
 -- Дамп данных таблицы `orders`
 --
 
-INSERT INTO `orders` (`id`, `orderedSub`, `created_at`, `updated_at`, `totalPrice`, `clientName`, `address`, `phone`, `email`, `subEnd`, `user_id`, `qr`) VALUES
-(8, '1', '2023-05-06 12:52:07', '2023-05-06 12:52:07', 4, '1', '2', 3, '3', '2023-05-05', NULL, '1683388327.svg');
+INSERT INTO `orders` (`id`, `orderedSub`, `created_at`, `updated_at`, `totalPrice`, `clientName`, `address`, `phone`, `email`, `subEnd`, `user_id`, `sub_id`, `qr`) VALUES
+(17, '30 Days', '2023-05-10 15:29:58', '2023-05-10 15:29:58', 25, 'Artur', 'olevi', 55435345, 'admin@test.ee', '2023-06-09', 4, 5, '1683743398.svg');
 
 -- --------------------------------------------------------
 
@@ -152,8 +153,8 @@ CREATE TABLE `subscriptions` (
 --
 
 INSERT INTO `subscriptions` (`id`, `name`, `description`, `price`, `days`, `created_at`, `updated_at`) VALUES
-(1, '30 days', 'ka4alo4ka', 10, 30, '2023-05-06 11:43:55', '2023-05-06 11:43:55'),
-(3, '15 days', 'ka4', 5, 15, '2023-05-06 09:02:47', '2023-05-06 09:03:21');
+(5, '30 Days', 'Ka4alo4ka', 25, 30, '2023-05-10 12:23:12', '2023-05-10 12:23:16'),
+(6, '15 days', 'ka4', 5, 15, '2023-05-10 12:23:25', '2023-05-10 12:23:25');
 
 -- --------------------------------------------------------
 
@@ -177,8 +178,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `created_at`, `updated_at`) VALUES
 (3, 'manager', 'manager', 'test2@test.ee', '$2y$10$orxi.q8tason/AaqCz08HOec/5GwQ4F/8yyuQNiI.p5B7xBrgPhJe', '2023-05-07 08:49:20', '2023-05-07 09:03:43'),
-(4, 'admin', 'admin', 'admin@test.ee', '$2y$10$ZuNACb7Egewt9qByzWQy6.AH7cw/AFSPhLryRwEkTjlyiouZM8DZe', '2023-05-07 09:04:03', '2023-05-07 09:04:03'),
-(5, 'client', 'client', 'client@test.ee', '$2y$10$SalqDYZg7tBA3xZ.4T2uc.FjtZLLVu7d/r.wzszgZyizbFA8SIMay', '2023-05-07 09:05:45', '2023-05-07 09:05:45');
+(4, 'admin', 'admin', 'admin@test.ee', '$2y$10$QCuSN5IRzuUuT7DTgSWx.exKyU2X0GnjNGeeUJi3BI9TcCcym0Sz2', '2023-05-07 09:04:03', '2023-05-10 12:04:24'),
+(5, 'client', 'client', 'client@test.ee', '$2y$10$pdlgsdBwPLJ5WF2qlq6XZ.yqEV8WnhJvDsvCrYzOxYgyT6pGV5Dre', '2023-05-07 09:05:45', '2023-05-10 12:01:07');
 
 --
 -- Индексы сохранённых таблиц
@@ -213,7 +214,8 @@ ALTER TABLE `news`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `sub_id` (`sub_id`);
 
 --
 -- Индексы таблицы `subscriptions`
@@ -260,13 +262,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT для таблицы `subscriptions`
 --
 ALTER TABLE `subscriptions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
@@ -282,7 +284,8 @@ ALTER TABLE `users`
 -- Ограничения внешнего ключа таблицы `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`sub_id`) REFERENCES `subscriptions` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
