@@ -140,11 +140,6 @@ Route::get('/elements', function () {
 });
 
 
-Route::get('/from', function () {
-    return view('from');
-});
-
-
 Route::get('/gallery', function () {
     return view('gallery');
 });

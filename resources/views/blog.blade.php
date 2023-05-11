@@ -40,6 +40,7 @@
                                         <h2 class="blog-head">{{ $news->title}}</h2>
                                     </a>
                                     <p>{{ $news->description}}</p>
+
                                 </div>
                             </article>
                             @endforeach

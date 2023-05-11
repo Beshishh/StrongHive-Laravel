@@ -56,13 +56,7 @@
                                             <li><a href="services" class="lng-services">Subscriptions</a></li>
                                             <li><a href="schedule" class="lng-schedule">schedule</a></li>
                                             <li><a href="gallery" class="lng-gallery">gallery</a></li>
-                                            <li><a href="blog" class="lng-blog">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog">Blog</a></li>
-                                                    <li><a href="blog_details">Blog Details</a></li>
-                                                    <li><a href="elements">Element</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><a href="blog" class="lng-blog">Blog</a></li>
                                             <li><a href="contact">Contact</a></li>
 
                                             @if (Auth::check())
