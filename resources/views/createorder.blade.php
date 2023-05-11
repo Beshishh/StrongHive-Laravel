@@ -44,13 +44,15 @@
                 </svg>
               </span>
             </h2>
+            @include('common.errors')
             <form action="{{ url('createorder/' .$subscriptions->id) }}" method="POST" class="form-horizontal" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div id="collapseCC" class="accordion-collapse collapse show" data-bs-parent="#accordionPayment" style="">
               <div class="accordion-body">
                   <div class="col-lg-12">
                     <div class="mb-3">
                       <label class="form-label">Client Name</label>
-                      <input type="cardholderName" name="clientName" class="form-control">
+                      <input type="name" name="clientName" class="form-control">
                     </div>
                   </div>
                   <div class="col-lg-12">
@@ -68,7 +70,7 @@
                   <div class="col-lg-12">
                   <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="cardholderName" name="cardholderName" class="form-control" placeholder="{{ Auth::user()->email }}" >
+                    <input type="cardholderName" name="email" class="form-control" value="{{ Auth::user()->email }}" >
                   </div>
                 </div>
                 <div class="mb-3">
@@ -117,6 +119,7 @@
               <span>TOTAL</span> <strong class="text-dark">{{ $subscriptions->price }}€</strong>
             </div>
             <button type="submit" class="btn btn-primary w-100 mt-2">Place order</button>
+            </form>
           </div>
         </div>
       </div>

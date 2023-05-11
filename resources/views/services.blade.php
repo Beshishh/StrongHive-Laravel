@@ -60,9 +60,9 @@
 
                         </div>
                         <div class="img-cap">
+                        {{ csrf_field() }}
                             <a href="{{ url('createorder/' .$subscriptions->id) }}" class="">Order your subscription <i class="ti-arrow-right"></i></a>
                         </div>
-                        {{ csrf_field() }}
                     </div>
                 </div>
                 @endforeach
