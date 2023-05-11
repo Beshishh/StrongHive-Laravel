@@ -115,9 +115,6 @@ Route::get('/', [Controller::class,'IndexController']);
 
 
 
-Route::get('/about', function () {
-    return view('about');
-});
 
 Route::get('/blog_details', function () {
     return view('blog_details');

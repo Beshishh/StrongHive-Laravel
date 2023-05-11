@@ -52,7 +52,6 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="/" class="lng-home">Home</a></li>
-                                            <li><a href="about" class="lng-about">About</a></li>
                                             <li><a href="services" class="lng-services">Subscriptions</a></li>
                                             <li><a href="schedule" class="lng-schedule">schedule</a></li>
                                             <li><a href="gallery" class="lng-gallery">gallery</a></li>
