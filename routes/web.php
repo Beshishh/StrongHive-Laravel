@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubscriptionsController;
 use App\Http\Controllers\OrdersController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +50,9 @@ Route::group(['middleware' => ['auth']], function (){
         Route::post('/editnews/{news}', [NewsController::class,'update']);
         Route::delete('/newslist/{news}', [NewsController::class,'destroy']);
 
+        Route::get('/scheduletable', [ScheduleController::class,'index']);
+        Route::get('/editschedule/{schedule}', [ScheduleController::class,'edit']);
+        Route::post('/editschedule/{schedule}', [ScheduleController::class,'update']);
 
 
         Route::get('/gallerylist', [GalleryController::class,'index']);

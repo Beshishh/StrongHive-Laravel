@@ -72,6 +72,13 @@
             </a>
           </li>
           <li>
+            <a href="{{ url('/scheduletable') }}">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Schedule</p>
+            </a>
+          </li>
+          <li>
+          <li>
             <a href="{{ url('/newslist') }}">
               <i class="now-ui-icons design_bullet-list-67"></i>
               <p>News List</p>

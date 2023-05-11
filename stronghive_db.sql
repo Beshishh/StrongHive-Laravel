@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 10 2023 г., 20:39
+-- Время создания: Май 11 2023 г., 22:06
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -99,9 +99,7 @@ CREATE TABLE `news` (
 
 INSERT INTO `news` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
 (32, 'test1', 'test2', 'learn_about_bg.png', '2023-04-30 07:51:30', '2023-04-30 07:51:30'),
-(36, 'test2', 'teststs', 'fzuH1zl1Y3eaAVKmAiyy5s05FAiL8fT9na0Vm47BsmGQ4aXKHRkJEHHrhFT6YsascRYIfkn2R9GVJQ3izMLnHYce.jpg', '2023-04-30 10:06:18', '2023-04-30 10:06:18'),
-(37, 'test3', 'testtt', 'изображение_2023-04-30_160901690.png', '2023-04-30 10:09:02', '2023-04-30 10:09:02'),
-(38, 'test22', 'tetssss', '1zJvl5HyeAsFZoYAPoOZiRmrHGyPiOiBNvJfje7NYWdumw5PzxQXWp6tkQcA-RQy1W7bmulEW0CMIuV0-cmNgMZb.jpg', '2023-04-30 10:23:22', '2023-04-30 10:23:22');
+(36, 'test2', 'teststs', 'single_blog_1.png', '2023-04-30 10:06:18', '2023-05-11 12:47:36');
 
 -- --------------------------------------------------------
 
@@ -131,6 +129,34 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `orderedSub`, `created_at`, `updated_at`, `totalPrice`, `clientName`, `address`, `phone`, `email`, `subEnd`, `user_id`, `sub_id`, `qr`) VALUES
 (17, '30 Days', '2023-05-10 15:29:58', '2023-05-10 15:29:58', 25, 'Artur', 'olevi', 55435345, 'admin@test.ee', '2023-06-09', 4, 5, '1683743398.svg');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `schedule`
+--
+
+CREATE TABLE `schedule` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `open` time NOT NULL,
+  `close` time NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Дамп данных таблицы `schedule`
+--
+
+INSERT INTO `schedule` (`id`, `name`, `open`, `close`, `created_at`, `updated_at`) VALUES
+(2, 'Monday', '10:00:00', '21:00:00', '2023-05-11 19:57:31', '2023-05-11 17:04:39'),
+(5, 'Tuesday', '10:00:00', '21:00:00', '2023-05-11 19:59:31', '2023-05-11 19:59:31'),
+(6, 'Wednesday', '10:00:00', '21:00:00', '2023-05-11 20:00:15', '2023-05-11 20:00:15'),
+(7, 'Thursday', '10:00:00', '21:00:00', '2023-05-11 20:00:34', '2023-05-11 20:00:34'),
+(8, 'Friday', '10:00:00', '21:00:00', '2023-05-11 20:00:34', '2023-05-11 20:00:34'),
+(9, 'Saturday', '10:00:00', '21:00:00', '2023-05-11 20:00:15', '2023-05-11 20:00:15'),
+(10, 'Sunday', '10:00:00', '20:00:00', '2023-05-11 20:01:19', '2023-01-18 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -218,6 +244,12 @@ ALTER TABLE `orders`
   ADD KEY `sub_id` (`sub_id`);
 
 --
+-- Индексы таблицы `schedule`
+--
+ALTER TABLE `schedule`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `subscriptions`
 --
 ALTER TABLE `subscriptions`
@@ -263,6 +295,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT для таблицы `schedule`
+--
+ALTER TABLE `schedule`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `subscriptions`
