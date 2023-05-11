@@ -10,10 +10,8 @@
                             <div class="footer-tittle">
                                 <h4>COMPANY</h4>
                                 <ul>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Company</a></li>
-                                    <li><a href="#"> Press & Blog</a></li>
-                                    <li><a href="#"> Privacy Policy</a></li>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/blog"> Press & Blog</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -23,10 +21,10 @@
                             <div class="footer-tittle">
                                 <h4>Open hour</h4>
                                 <ul>
-                                    <li><a href="#">Monday 11am-7pm</a></li>
-                                    <li><a href="#"> Tuesday-Friday 11am-8pm</a></li>
-                                    <li><a href="#"> Saturday 10am-6pm</a></li>
-                                    <li><a href="#"> Sunday 11am-6pm</a></li>
+                                    <li><a>Monday 11am-7pm</a></li>
+                                    <li><a> Tuesday-Friday 11am-8pm</a></li>
+                                    <li><a> Saturday 10am-6pm</a></li>
+                                    <li><a > Sunday 11am-6pm</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -36,13 +34,6 @@
                             <!-- logo -->
                             <div class="footer-logo">
                                 <a href=""><img src="/assets/img/logo/logo.png" alt=""></a>
-                            </div>
-                            <!-- Footer Social -->
-                            <div class="footer-social ">
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
