@@ -12,38 +12,15 @@
                     <div class="row">
                         <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay="0.1s">with patrick potter</span>
-                                <h1 data-animation="fadeInLeft" data-delay="0.4s">Build Perfect body Shape for good and
+                                <h1 data-animation="fadeInLeft">Build Perfect body Shape for good and
                                     Healthy life.</h1>
-                                <a href="from" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.8s">became
+                                <a href="/register" class="btn hero-btn" data-animation="fadeInLeft">became
                                     a member</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
-                            <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay="0.1s">with patrick potter</span>
-                                <h1 data-animation="fadeInLeft" data-delay="0.4s">Build Perfect body Shape for good and
-                                    Healthy life.</h1>
-                                <a href="from.html" class="btn hero-btn" data-animation="fadeInLeft"
-                                    data-delay="0.8s">became a member</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Video icon -->
-        <div class="video-icon">
-            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i
-                    class="fas fa-play"></i></a>
-        </div>
     </div>
     <!-- slider Area End-->
     <!--? About Area Start -->
@@ -68,7 +45,6 @@
                             possibilities. Pixel-perfect replication of the designers is intended.</p>
                         <p class="mb-65 pera-bottom">Brook presents your services with flexible, convefnient and chient
                             anipurpose layouts. You can select your favorite layouts.</p>
-                        <a href="from" class="btn">became a member</a>
                     </div>
                 </div>
             </div>
@@ -87,59 +63,36 @@
                             <h2>PUSH YOUR LIMITS FORWARD We Offer to you</h2>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-2 col-md-3">
-                        <a href="services.html" class="btn wantToWork-btn f-right">More Services</a>
-                    </div>
                 </div>
             </div>
         </section>
         <!-- Want To work End -->
         <div class="container">
-            <div class="row">
+            @if (count ($subscriptions ?? '') > 0)
+                <div class="row">
+                @foreach ($subscriptions as $subscriptions)
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
                             <i class="flaticon-fitness"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">30 day package</a></h5>
-                            <p>Work out for 30 days consecutive without a contract</p>
-                            <h2>32.99€</h2>
+                            <h5><a href="services.html">{{ $subscriptions->name }}</a></h5>
+                            <p>{{ $subscriptions->description }}</p>
+                            <h2>{{ $subscriptions->price }}€ </h2>
+
                         </div>
                         <div class="img-cap">
-                            <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
+                            <a href="/services" class="">See our other offers<i class="ti-arrow-right"></i></a>
                         </div>
+                        {{ csrf_field() }}
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-50">
-                        <div class="cat-icon">
-                            <i class="flaticon-healthcare-and-medical"></i>
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">365 day package</a></h5>
-                            <p>The best choice</p>
-                            <h2>219.99€</h2>
-                        </div>
-                        <div class="img-cap">
-                            <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                        </div>
-                    </div>
+                @endforeach
+                @else
+                    <p>Data not found</p>
+                    @endif
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat text-center mb-50">
-                        <div class="cat-icon">
-                            <i class="flaticon-clock"></i>
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">One-time pass</a></h5>
-                            <p>Payment can be made at the club with a payment card.</p>
-                            <h2>7€</h2>
-                        </div>
-                        <div class="img-cap">
-                            <a href="services.html" class="">Discover More About Us <i class="ti-arrow-right"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -228,12 +181,12 @@
                 <div class="row align-items-end justify-content-between">
                     <div class="col-lg-6 col-md-9 col-sm-9">
                         <div class="section-tittle">
-                            <span>oUR TEAM MAMBERS</span>
+                            <span>oUR TEAM MEMBERS</span>
                             <h2>Our Most Exprienced Trainers</h2>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-2 col-md-3">
-                        <a href="services.html" class="btn wantToWork-btn f-right">More Services</a>
+                        <a href="/services" class="btn wantToWork-btn f-right">Get subscription</a>
                     </div>
                 </div>
             </div>
@@ -759,72 +712,6 @@
 
         </section>
         <!-- Date Tabs End -->
-        <!--? Contact form Start -->
-        <section class="contact-form-main">
-            <div class="container">
-                <div class="row justify-content-end">
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="form-wrapper">
-                            <!--Section Tittle  -->
-                            <div class="form-tittle">
-                                <div class="row ">
-                                    <div class="col-lg-11 col-md-10 col-sm-10">
-                                        <div class="section-tittle">
-                                            <span>Contact Form</span>
-                                            <h2>Feel Free to contact with us!</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Section Tittle  -->
-                            <form id="contact-form" action="#" class="contact-form" method="POST">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box user-icon mb-30">
-                                            <input type="text" name="name" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box email-icon mb-30">
-                                            <input type="text" name="email" placeholder="Phone">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 mb-30">
-                                        <div class="select-itms">
-                                            <select name="select" id="select2">
-                                                <option value="">Boxing</option>
-                                                <option value="">saiful islam</option>
-                                                <option value="">Arafath Miya</option>
-                                                <option value="">Shakil Miya</option>
-                                                <option value="">Tamim Sharker</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-box subject-icon mb-30">
-                                            <input type="Email" name="subject" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-box message-icon mb-65">
-                                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                                        </div>
-                                        <div class="submit-info">
-                                            <button class="btn" type="submit">Send Message</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- contact left Img-->
-            <div class="from-left d-none d-lg-block">
-                <img src="assets/img/gallery/contact_form.png" alt="">
-            </div>
-        </section>
-        <!-- Contact form End -->
         <!--? Blog Area Start -->
         <section class="home-blog-area section-padding30">
             <div class="container">
@@ -837,45 +724,32 @@
                         </div>
                     </div>
                 </div>
+                @if (count ($news ?? '') > 0)
                 <div class="row">
+                @foreach ($news as $news)
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/gallery/blog1.png" alt="">
+                                    <img src="assets/img/blog/{{ $news->image }}" alt="">
                                     <!-- Blog date -->
                                     <div class="blog-date text-center">
-                                        <span>24</span>
-                                        <p>Now</p>
+                                        <span>{{ $news->created_at->format('d') }}</span>
+                                        <p>{{$news->created_at->format('F')}}</p>
                                     </div>
                                 </div>
                                 <div class="blog-cap">
-                                    <span>Creative derector</span>
-                                    <h3><a href="blog_details">Footprints in Time is perfect House in Kurashiki</a>
+                                    <span>{{ $news->title}}</span>
+                                    <h3><a href="/blog">{{ $news->title}}</a>
                                     </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6">
-                        <div class="home-blog-single mb-30">
-                            <div class="blog-img-cap">
-                                <div class="blog-img">
-                                    <img src="assets/img/gallery/blog2.png" alt="">
-                                    <!-- Blog date -->
-                                    <div class="blog-date text-center">
-                                        <span>24</span>
-                                        <p>Now</p>
-                                    </div>
-                                </div>
-                                <div class="blog-cap">
-                                    <span>Creative derector</span>
-                                    <h3><a href="blog_details">Footprints in Time is perfect House in Kurashiki</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                @else
+                    <p>Data not found</p>
+                    @endif
                 </div>
             </div>
         </section>
