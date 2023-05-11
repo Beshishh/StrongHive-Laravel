@@ -155,21 +155,41 @@
     <!-- About-2 Area End -->
     <!--? Gallery Area Start -->
     <div class="gallery-area">
-        <div class="container-fluid p-0 fix">
+        <div class="container-fluid p-15 fix">
             <div class="row">
-                @foreach($galleryLimit as $item)
-                    <div class="col-lg-6">
-                        <div class="box snake mb-30">
-                            <div class="gallery-img big-img"
-                            style="background-image: url(assets/img/gallery/{{ $item->image }});"></div>
-                            <div class="overlay">
-                                <div class="overlay-content">
-                                    <a href="gallery"><i class="ti-arrow-top-right"></i></a>
-                                </div>
+                @foreach($galleryBigImage as $item)
+                <div class="col-lg-6">
+                    <div class="box snake mb-30">
+                        <div class="gallery-img big-img"
+                        style="background-image: url(assets/img/gallery/{{ $item->image }});"></div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <a href="gallery"><i class="ti-arrow-top-right"></i></a>
                             </div>
                         </div>
                     </div>
                 @endforeach
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                    @foreach($galleryLimit as $item2)
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="box snake mb-30">
+                                <div class="gallery-img small-img"
+                                    style="background-image: url(assets/img/gallery/{{ $item2->image }});"></div>
+                                <div class="overlay">
+                                    <div class="overlay-content">
+                                        <a href="gallery"><i class="ti-arrow-top-right"></i></a>
+                                        <h3>Best fitness gallery</h3>
+                                        <p>Fitness, Body</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

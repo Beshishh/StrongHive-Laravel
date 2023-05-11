@@ -22,11 +22,13 @@ class Controller extends BaseController
 
     public function IndexController()
     {
-        $galleryLimit = Gallery::orderBy('id', 'asc')->take(5)->get();
+
+        $galleryBigImage = Gallery::orderBy('id', 'asc')->take(1)->get();
+        $galleryLimit = Gallery::orderBy('id', 'asc')->skip(1)->take(4)->get();
         $news = News::orderBy('id', 'asc')->take(2)->get();
         $coach = Coach::orderBy('id', 'asc')->get();
         $subscriptions = Subscriptions::orderBy('price', 'asc')->take(3)->get();
-        return view('index', compact('galleryLimit', 'coach', 'subscriptions', 'news'));
+        return view('index', compact('galleryLimit', 'coach', 'subscriptions', 'news', 'galleryBigImage'));
     }
 
     public function galleryList()

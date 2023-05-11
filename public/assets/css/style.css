@@ -7570,3 +7570,13 @@ del {
 .owl-stage{
     width: 6000px !important;
 }
+
+
+
+.gallery-area .box .big-img {
+    height: 790px !important;;
+}
+
+.gallery-area .box .small-img {
+    height: 380px;
+}

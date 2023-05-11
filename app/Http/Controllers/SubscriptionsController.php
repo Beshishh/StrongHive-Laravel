@@ -24,10 +24,10 @@ class SubscriptionsController extends Controller
     }
 
     public function show(Subscriptions $subscriptions)
-    {  
+    {
         return view('subscriptions.detail', compact('subscriptions'));
     }
-    
+
 
 
     public function create()
@@ -78,11 +78,13 @@ public function destroy(Subscriptions $subscriptions)
 public function orderscreate(Subscriptions $subscriptions)
 {
     $user = Auth::user();
-    
+
+    $subscriptionsData = Subscriptions::orderBy('id', 'asc')->get();
+
     if ($user->orders) {
         return back()->with('error', 'You already have an active subscription.');
     }
-    
+
     return view('createorder', compact('subscriptions'));
 }
 
