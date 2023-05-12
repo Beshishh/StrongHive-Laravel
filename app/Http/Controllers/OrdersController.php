@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\User;
 use App\Models\Orders;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -102,8 +103,9 @@ class OrdersController extends Controller
         $id = Auth::id();
         $subStart = Orders::where('user_id', $id)->value('created_at');
         $subEnd = Orders::where('user_id', $id)->value('subEnd');
+        $schedule = Schedule::orderBy('id', 'asc')->get();
         $qr = Orders::where('user_id', $id)->value('qr');
-        return view('profile.index', compact(array('subStart', 'subEnd', 'qr')));
+        return view('profile.index', compact(array('subStart', 'subEnd', 'qr', 'schedule')));
     }
 /*
     public function profileQr(){

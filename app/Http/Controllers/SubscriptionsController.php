@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\Subscriptions;
 use App\Models\Orders;
+use App\Models\Schedule;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Auth;
@@ -20,7 +21,8 @@ class SubscriptionsController extends Controller
     public function pricelist()
     {
         $subscriptions = Subscriptions::orderBy('price', 'asc')->get();
-        return view('services', compact('subscriptions'));
+        $schedule = Schedule::orderBy('id', 'asc')->get();
+        return view('services', compact('subscriptions', 'schedule'));
     }
 
     public function show(Subscriptions $subscriptions)
@@ -80,12 +82,13 @@ public function orderscreate(Subscriptions $subscriptions)
     $user = Auth::user();
 
     $subscriptionsData = Subscriptions::orderBy('id', 'asc')->get();
+    $schedule = Schedule::orderBy('id', 'asc')->get();
 
     if ($user->orders) {
         return back()->with('error', 'You already have an active subscription.');
     }
 
-    return view('createorder', compact('subscriptions'));
+    return view('createorder', compact('subscriptions', 'subscriptionsData', 'schedule'));
 }
 
 public function orderstore(Request $request, Subscriptions $subscriptions)

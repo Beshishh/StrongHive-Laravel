@@ -21,10 +21,13 @@
                             <div class="footer-tittle">
                                 <h4>Open hour</h4>
                                 <ul>
-                                    <li><a>Monday 11am-7pm</a></li>
-                                    <li><a> Tuesday-Friday 11am-8pm</a></li>
-                                    <li><a> Saturday 10am-6pm</a></li>
-                                    <li><a > Sunday 11am-6pm</a></li>
+                                @if (count ($schedule ?? '') > 0)
+                                @foreach ($schedule as $schedule)
+                                <li><a>{{$schedule->name}} {{$schedule->open}}-{{$schedule->close}}</a></li>
+                                @endforeach
+                                @else
+                            <li><a> No data found</a></li>
+                                @endif
                                 </ul>
                             </div>
                         </div>

@@ -116,10 +116,6 @@ Route::group(['middleware' => ['auth']], function (){
 Route::get('/', [Controller::class,'IndexController']);
 
 
-
-
-
-
 Route::get('/blog_details', function () {
     return view('blog_details');
 });
@@ -132,9 +128,9 @@ Route::get('/blog', function () {
 Route::get('/blog', [Controller::class,'newsList']);
 
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+
+Route::get('/contact', [Controller::class,'contacts']);
+
 
 Route::get('/elements', function () {
     return view('elements');
@@ -145,20 +141,6 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 Route::get('/gallery', [GalleryController::class,'galleryList']);
-
-
-Route::get('/schedule', function () {
-    return view('schedule');
-});
-
-
-
-
-
-
-
-
-
 
 
 

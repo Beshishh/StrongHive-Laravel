@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 use Hash;
 use Auth;
@@ -119,8 +120,9 @@ return view('users.registerresult');
 public function profile_edit()
 {
     $users = User::findOrFail(Auth::user()->id);
+    $schedule = Schedule::orderBy('id', 'asc')->get();
     $role = array('admin', 'manager', 'client');
-    return view('profile.edit', compact('users', 'role'));
+    return view('profile.edit', compact('users', 'role', 'schedule'));
 }
 
 public function profile_update(Request $request)
