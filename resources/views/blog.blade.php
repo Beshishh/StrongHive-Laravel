@@ -29,7 +29,7 @@
                             @foreach($newsList as $news)
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/{{ $news->image }}" alt="">
+                                    <img class="card-img mt-0 rounded-0" src="assets/img/blog/{{ $news->image }}" alt="">
                                     <a href="#" class="blog_item_date">
 
                                         <h3>{{ $news->created_at->format('d') }}</h3>
@@ -58,7 +58,7 @@
                             <aside class="single_sidebar_widget search_widget">
                                 <form>
                                     <div class="form-group">
-                                        <div class="input-group mb-3">
+                                        <div class="input-group mb-5">
                                         <input type="search" class="form-control" placeholder="Find news here"  name="search" value="{{ request('search') }}">
                                             <div class="input-group-append">
                                                 <button class="btns" type="button"><i class="ti-search"></i></button>

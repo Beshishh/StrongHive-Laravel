@@ -40,7 +40,7 @@
                             <h2>Optimize Your Time at the Gym for Safe and Effective Muscle Building</h2>
                         </div>
                         <p class="pera-top">Welcome to our sports gym! We offer a modern and progressive space for achieving your
-                        fitness goals. Our aim is to help you attain the perfect physique, build muscle, and enhance 
+                        fitness goals. Our aim is to help you attain the perfect physique, build muscle, and enhance
                         overall endurance.</p>
                         <p class="mb-65 pera-bottom">In our gym, you will find state-of-the-art equipment and comfortable machines that will assist you in training efficiently.
                              Our team of experienced and certified trainers is always ready to provide assistance and support by designing
@@ -130,9 +130,9 @@
                             <!-- Single Testimonial -->
                             <div class="single-testimonial">
                                 <div class="testimonial-caption">
-                                    <p>This sports gym is incredible! The facilities are top-notch with modern equipment, and the 
-                                    trainers are knowledgeable and motivating. The welcoming atmosphere and supportive 
-                                    community make each workout enjoyable. It's clean, safe, and has helped me achieve my 
+                                    <p>This sports gym is incredible! The facilities are top-notch with modern equipment, and the
+                                    trainers are knowledgeable and motivating. The welcoming atmosphere and supportive
+                                    community make each workout enjoyable. It's clean, safe, and has helped me achieve my
                                     fitness goals. Highly recommended!</p>
                                     <div class="rattiong-caption">
                                     <span>Olivia Johnson<span>Client</span> </span>
@@ -142,11 +142,11 @@
                             <!-- Single Testimonial -->
                             <div class="single-testimonial">
                                 <div class="testimonial-caption">
-                                    <p>I am thrilled with my experience at this gym! The state-of-the-art equipment and 
-                                    knowledgeable trainers have truly helped me transform my fitness journey. The variety of 
-                                    classes offered keeps me engaged and motivated, and the positive energy from the staff and 
-                                    fellow members creates a supportive environment. This gym has exceeded my 
-                                    expectations and I highly recommend it to anyone looking to achieve their fitness goals in a 
+                                    <p>I am thrilled with my experience at this gym! The state-of-the-art equipment and
+                                    knowledgeable trainers have truly helped me transform my fitness journey. The variety of
+                                    classes offered keeps me engaged and motivated, and the positive energy from the staff and
+                                    fellow members creates a supportive environment. This gym has exceeded my
+                                    expectations and I highly recommend it to anyone looking to achieve their fitness goals in a
                                     welcoming and professional setting.</p>
                                     <div class="rattiong-caption">
                                         <span>Ethan Anderson<span>Client</span> </span>
