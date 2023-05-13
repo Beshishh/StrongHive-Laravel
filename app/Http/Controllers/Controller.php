@@ -47,14 +47,24 @@ class Controller extends BaseController
         return view('gallery', compact('galleryList', 'schedule'));
     }
 
-    public function newsList()
+    public function newsList(News $news)
     {
         $newsList = News::orderBy('id', 'asc')->get();
         $schedule = Schedule::orderBy('id', 'asc')->get();
         $dayNumber = date('d');
         $monthNumber = date('m');
+        
+        if (request('search')) {
+            $newsList = News::where('title', 'like', '%' . request('search') . '%')->get();
+        } else {
+            $newsList = News::all();
+        }
         return view('blog', compact('newsList', 'schedule'));
     }
-
+    public function showNews(News $news)
+    {  
+        $schedule = Schedule::orderBy('id', 'asc')->get();
+        return view('blog_details', compact('news' , 'schedule'));
+    }
 
 }

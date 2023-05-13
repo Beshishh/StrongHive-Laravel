@@ -15,7 +15,7 @@
                   <form>
                     <div class="row align-items-center ">
                       <div class = "col">
-                        <input type="search" class="form-control" placeholder="Find news here"  name="search"value="{{ request('search') }}">
+                        <input type="search" class="form-control" placeholder="Find news here"  name="search" value="{{ request('search') }}">
                       </div>
                       <div class = "col-sm-2">
                         <a href="{{url('/newslist')}}" title="news"><i class="btn btn-primary">Clear search</i></a>

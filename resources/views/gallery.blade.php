@@ -22,6 +22,7 @@
         <div class="gallery-area section-padding30">
             <div class="container-fluid p-0 fix">
                 <div class="row">
+                @if (count ($galleryList ?? '') > 0)
                 @foreach($galleryList as $item)
                     <div class="col-lg-6">
                         <div class="box snake mb-30">
@@ -29,6 +30,9 @@
                         </div>
                     </div>
                     @endforeach
+                    @else
+                    <p>No images found</p>
+                    @endif
                 </div>
             </div>
         </div>
