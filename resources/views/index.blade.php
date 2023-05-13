@@ -12,8 +12,7 @@
                     <div class="row">
                         <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
                             <div class="hero__caption">
-                                <h1 data-animation="fadeInLeft">Build Perfect body Shape for good and
-                                    Healthy life.</h1>
+                                <h1 data-animation="fadeInLeft">Transform Your Body, Transform Your Life</h1>
                                 <a href="/register" class="btn hero-btn" data-animation="fadeInLeft">became
                                     a member</a>
                             </div>
@@ -38,13 +37,20 @@
                         <!-- Section Tittle -->
                         <div class="section-tittle section-tittle3 mb-35">
                             <span>ABOUT oUR GYM</span>
-                            <h2>Safe Body building proper Solutions That Saves our Valuable Time!</h2>
+                            <h2>Optimize Your Time at the Gym for Safe and Effective Muscle Building</h2>
                         </div>
-                        <p class="pera-top">Brook presents your services with flexible, convenient and cdpose layouts.
-                            You can select your favorite layouts & elements for cular ts with unlimited ustomization
-                            possibilities. Pixel-perfect replication of the designers is intended.</p>
-                        <p class="mb-65 pera-bottom">Brook presents your services with flexible, convefnient and chient
-                            anipurpose layouts. You can select your favorite layouts.</p>
+                        <p class="pera-top">Welcome to our sports gym! We offer a modern and progressive space for achieving your
+                        fitness goals. Our aim is to help you attain the perfect physique, build muscle, and enhance 
+                        overall endurance.</p>
+                        <p class="mb-65 pera-bottom">In our gym, you will find state-of-the-art equipment and comfortable machines that will assist you in training efficiently.
+                             Our team of experienced and certified trainers is always ready to provide assistance and support by designing
+                             personalized workout programs tailored to your goals and fitness level.
+                              <br>
+                                We have created a comfortable and motivating atmosphere where everyone can feel at home.
+                                Our gym offers a variety of group classes, including yoga, Pilates, functional training, and more.
+                                You can also take advantage of our massage services and visit the sauna for relaxation after your workout.</p>
+                        <p class="mb-65 pera-bottom"> Join us today and give your workouts a new boost. We are confident that our sports gym will become your reliable
+                        partner on your journey towards achieving your fitness and health goals</p>
                     </div>
                 </div>
             </div>
@@ -124,24 +130,26 @@
                             <!-- Single Testimonial -->
                             <div class="single-testimonial">
                                 <div class="testimonial-caption">
-                                    <p>Brook presents your services with flexible, convenient and cdpose layouts. You
-                                        can select your favorite layouts & elements for cular ts with unlimited
-                                        ustomization possibilities. Pixel-perfect replica;ition of thei designers ijtls
-                                        intended csents your se.</p>
+                                    <p>This sports gym is incredible! The facilities are top-notch with modern equipment, and the 
+                                    trainers are knowledgeable and motivating. The welcoming atmosphere and supportive 
+                                    community make each workout enjoyable. It's clean, safe, and has helped me achieve my 
+                                    fitness goals. Highly recommended!</p>
                                     <div class="rattiong-caption">
-                                        <span>Jhon Smith<span>Gym Trainer</span> </span>
+                                    <span>Olivia Johnson<span>Client</span> </span>
                                     </div>
                                 </div>
                             </div>
                             <!-- Single Testimonial -->
                             <div class="single-testimonial">
                                 <div class="testimonial-caption">
-                                    <p>Brook presents your services with flexible, convenient and cdpose layouts. You
-                                        can select your favorite layouts & elements for cular ts with unlimited
-                                        ustomization possibilities. Pixel-perfect replica;ition of thei designers ijtls
-                                        intended csents your se.</p>
+                                    <p>I am thrilled with my experience at this gym! The state-of-the-art equipment and 
+                                    knowledgeable trainers have truly helped me transform my fitness journey. The variety of 
+                                    classes offered keeps me engaged and motivated, and the positive energy from the staff and 
+                                    fellow members creates a supportive environment. This gym has exceeded my 
+                                    expectations and I highly recommend it to anyone looking to achieve their fitness goals in a 
+                                    welcoming and professional setting.</p>
                                     <div class="rattiong-caption">
-                                        <span>Jhon Smith<span>Gym Trainer</span> </span>
+                                        <span>Ethan Anderson<span>Client</span> </span>
                                     </div>
                                 </div>
                             </div>
@@ -157,6 +165,7 @@
     <div class="gallery-area">
         <div class="container-fluid p-15 fix">
             <div class="row">
+            @if (count ($galleryBigImage ?? '') > 0)
                 @foreach($galleryBigImage as $item)
                 <div class="col-lg-6">
                     <div class="box snake mb-30">
@@ -169,9 +178,13 @@
                         </div>
                     </div>
                 @endforeach
+                @else
+                    <p>Data not found</p>
+                    @endif
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
+                    @if (count ($galleryLimit ?? '') > 0)
                     @foreach($galleryLimit as $item2)
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box snake mb-30">
@@ -187,6 +200,9 @@
                             </div>
                         </div>
                     @endforeach
+                    @else
+                    <p>Data not found</p>
+                    @endif
                     </div>
 
                 </div>
@@ -218,6 +234,7 @@
                 <div class="row">
                     <div class="gtco-testimonials">
                         <div class="owl-carousel owl-carousel1 owl-theme">
+                        @if (count ($coach ?? '') > 0)
                             @foreach ($coach as $coaches)
                             <div class="col-lg-12 col-md-7 col-sm-6">
                                 <div class="single-team mb-30">
@@ -241,6 +258,9 @@
                                 </div>
                             </div>
                             @endforeach
+                            @else
+                            <p>Data not found</p>
+                            @endif
                         </div>
                     </div>
                 </div>

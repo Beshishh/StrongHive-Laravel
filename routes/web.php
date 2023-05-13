@@ -116,16 +116,10 @@ Route::group(['middleware' => ['auth']], function (){
 Route::get('/', [Controller::class,'IndexController']);
 
 
-Route::get('/blog_details', function () {
-    return view('blog_details');
-});
-
 Route::get('/services', [SubscriptionsController::class,'pricelist']);
 
-Route::get('/blog', function () {
-    return view('blog');
-});
 Route::get('/blog', [Controller::class,'newsList']);
+Route::get('/blog_details/{news}', [Controller::class,'showNews']);
 
 
 
