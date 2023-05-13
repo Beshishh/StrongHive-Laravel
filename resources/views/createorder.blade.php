@@ -104,19 +104,20 @@
         </div>
       </div>
       <!-- Right -->
-      <div class="col-lg-3">
+
+      <div class="col-lg-2">
         <div class="card position-sticky top-0">
-          <div class="p-3 bg-light bg-opacity-10">
+          <div class="p-4 bg-light ">
             <h6 class="card-title mb-3">Order Summary</h6>
             <div class="d-flex justify-content-between mb-1 small">
-              <span>DAYS</span> <span>{{ $subscriptions->days }}</span>
+              <span>DAYS</span> <h4>{{ $subscriptions->days }}</h4>
             </div>
-            <div class="d-flex justify-content-between mb-1 small">
-              <span>PRICE</span> <span>{{ $subscriptions->price }}€</span>
+            <div class="d-flex justify-content-between mb-1  small">
+              <span>PRICE</span> <h4>{{ $subscriptions->price }}€</h4>
             </div>
             <hr>
-            <div class="d-flex justify-content-between mb-4 small">
-              <span>TOTAL</span> <strong class="text-dark">{{ $subscriptions->price }}€</strong>
+            <div class="d-flex justify-content-between mb-1 big">
+              <span>TOTAL</span> <h4>{{ $subscriptions->price }}€</h4>
             </div>
             <button type="submit" class="btn btn-primary w-100 mt-2">Place order</button>
             </form>
