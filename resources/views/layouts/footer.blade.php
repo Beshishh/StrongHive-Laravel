@@ -10,7 +10,7 @@
                             <div class="footer-tittle">
                                 <h4>COMPANY</h4>
                                 <ul>
-                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/contacts">Contacts</a></li>
                                     <li><a href="/blog"> Press & Blog</a></li>
                                 </ul>
                             </div>
