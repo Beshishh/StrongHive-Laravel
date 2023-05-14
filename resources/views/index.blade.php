@@ -239,20 +239,11 @@
                             <div class="col-lg-12 col-md-7 col-sm-6">
                                 <div class="single-team mb-30">
                                     <div class="team-img">
-                                   <img src="assets/img/coaches/{{ $coaches->image}}" alt="">
+                                   <img src="assets/img/coaches/{{ $coaches->image}}" class="img-fluid" alt="">
                                         <div class="team-caption">
 
                                             <h3><a href="#">{{ $coaches->firstname }} {{ $coaches->lastname }}</a></h3>
                                             <span>{{ $coaches->description }}</span>
-                                            <!-- Blog Social -->
-                                            <div class="team-social">
-                                                <ul>
-                                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fas fa-globe"></i></a></li>
-                                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -312,8 +303,7 @@
                                     </div>
                                 </div>
                                 <div class="blog-cap">
-                                    <span>{{ $news->title}}</span>
-                                    <h3><a href="/blog">{{ $news->title}}</a>
+                                    <h3><a href="{{url('blog_details/' .$news->id)}}">{{ $news->title}}</a>
                                     </h3>
                                 </div>
                             </div>

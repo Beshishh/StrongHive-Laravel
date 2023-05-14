@@ -43,7 +43,7 @@
                                     </form>
                                         <h2 class="blog-head">{{ $news->title}}</h2>
                                     </a>
-                                    <p>{{ $news->description}}</p>
+                                    <p>{{ \Illuminate\Support\Str::limit($news->description, 400) }}</p>
 
                                 </div>
                             </article>
@@ -61,14 +61,12 @@
                                         <div class="input-group mb-5">
                                         <input type="search" class="form-control" placeholder="Find news here"  name="search" value="{{ request('search') }}">
                                             <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
+                                                <button class="btns" type="submit"><i class="ti-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="clear" href="{{url('/blog')}}">Clear</button>
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Search</button>
+                                    <a href="{{url('/blog')}}" title="blog"><i class="btn btn-primary" style="width: 100%;">Clear search</i></a>
                                 </form>
                             </aside>
                     </section>

@@ -119,8 +119,8 @@ Route::get('/', [Controller::class,'IndexController']);
 Route::get('/services', [SubscriptionsController::class,'pricelist']);
 
 Route::get('/blog', [Controller::class,'newsList']);
-Route::get('/blog_details/{news}', [Controller::class,'showNews']);
 
+Route::get('/blog_details/{news}', [Controller::class,'showNews']);
 
 
 Route::get('/contact', [Controller::class,'contacts']);

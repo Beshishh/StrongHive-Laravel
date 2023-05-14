@@ -27,7 +27,7 @@ class Controller extends BaseController
         $galleryBigImage = Gallery::orderBy('id', 'asc')->take(1)->get();
         $galleryLimit = Gallery::orderBy('id', 'asc')->skip(1)->take(4)->get();
         $schedule = Schedule::orderBy('id', 'asc')->get();
-        $news = News::orderBy('id', 'asc')->take(2)->get();
+        $news = News::orderBy('created_at', 'desc')->take(2)->get();
         $coach = Coach::orderBy('id', 'asc')->get();
         
         $subscriptions = Subscriptions::orderBy('price', 'asc')->take(3)->get();
@@ -49,18 +49,21 @@ class Controller extends BaseController
 
     public function newsList(News $news)
     {
-        $newsList = News::orderBy('id', 'asc')->get();
+        $newsQuery = News::query();
+    
+        if (request('search')) {
+            $newsQuery->where('title', 'like', '%' . request('search') . '%');
+        }
+    
+        $newsList = $newsQuery->orderBy('created_at', 'desc')->get();
         $schedule = Schedule::orderBy('id', 'asc')->get();
         $dayNumber = date('d');
         $monthNumber = date('m');
-        
-        if (request('search')) {
-            $newsList = News::where('title', 'like', '%' . request('search') . '%')->get();
-        } else {
-            $newsList = News::all();
-        }
+    
         return view('blog', compact('newsList', 'schedule'));
     }
+
+
     public function showNews(News $news)
     {  
         $schedule = Schedule::orderBy('id', 'asc')->get();
