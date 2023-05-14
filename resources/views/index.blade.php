@@ -123,7 +123,7 @@
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-55">
                             <span>Client Feedback</span>
-                            <h2>What Our Client thik about our gym</h2>
+                            <h2>What Our Client think about our gym</h2>
                         </div>
                         <!-- Testimonial Start -->
                         <div class="h1-testimonial-active">
