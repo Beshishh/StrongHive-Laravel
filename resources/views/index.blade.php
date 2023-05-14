@@ -13,7 +13,7 @@
                         <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
                             <div class="hero__caption">
                                 <h1 data-animation="fadeInLeft">Transform Your Body, Transform Your Life</h1>
-                                <a href="/register" class="btn hero-btn" data-animation="fadeInLeft">became
+                                <a href="/register" class="btn hero-btn" data-animation="fadeInLeft">become
                                     a member</a>
                             </div>
                         </div>
