@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 11 2023 г., 22:06
+-- Время создания: Май 14 2023 г., 11:46
 -- Версия сервера: 10.4.28-MariaDB
 -- Версия PHP: 8.2.4
 
@@ -42,7 +42,11 @@ CREATE TABLE `coach` (
 --
 
 INSERT INTO `coach` (`id`, `firstname`, `lastname`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(3, 'Billy', 'Herrington', 'ddd', 'avatars-000411292317-dt2f28-t500x500.jpg', '2023-05-01 13:33:59', '2023-05-01 13:37:35');
+(5, 'Samantha', 'Williams', 'As a professional athlete in the fitness industry, Samantha has achieved remarkable success in her own fitness journey and has empowered numerous clients to surpass their goals with her expertise and guidance.', 'team3.png', '2023-05-14 05:27:21', '2023-05-14 05:42:39'),
+(6, 'Michael', 'Rodriguez', 'With a track record of exceptional achievements in the fitness realm, Michael\'s passion for fitness is evident in his ability to help clients reach their desired outcomes and unlock their full potential.', 'pexels-thisisengineering-3912944.jpg', '2023-05-14 05:31:47', '2023-05-14 05:31:47'),
+(7, 'Daniel', 'Lee', 'With a focus on functional training and performance enhancement, Daniel utilizes his expertise as a professional athlete to design personalized programs that optimize clients\' strength, agility, and overall fitness, ultimately propelling them towards their desired goals.', 'pexels-ivan-remonte-4218662.jpg', '2023-05-14 05:35:26', '2023-05-14 05:35:26'),
+(8, 'Benjamin', 'Turner', 'A disciplined and driven trainer, Benjamin draws upon his experience as a professional athlete to guide clients towards remarkable fitness achievements, instilling a sense of determination and accountability in every session.', 'pexels-mike-jones-8874379.jpg', '2023-05-14 05:39:32', '2023-05-14 05:39:32'),
+(9, 'Nathan', 'Brooks', 'With a focus on functional strength and athletic performance, Nathan\'s training methodology combines his own success as a fitness industry professional with a personalized approach that helps clients surpass their goals and unlock their full potential.', 'team1.png', '2023-05-14 05:42:23', '2023-05-14 05:42:23');
 
 -- --------------------------------------------------------
 
@@ -63,8 +67,12 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `name`, `image`, `created_at`, `updated_at`) VALUES
-(3, 'aboba', 'about.png', '2023-05-01 14:10:40', '2023-05-01 14:10:40'),
-(4, 'abiba', 'about2.png', '2023-05-01 14:10:40', '2023-05-01 14:10:40');
+(3, 'gallery1', 'about.png', '2023-05-01 14:10:40', '2023-05-14 05:56:51'),
+(4, 'gallery2', 'about2.png', '2023-05-01 14:10:40', '2023-05-14 05:57:00'),
+(9, 'gallery3', 'gallery4.png', '2023-05-14 05:57:17', '2023-05-14 05:57:17'),
+(10, 'gallery4', 'gallery5.png', '2023-05-14 05:57:38', '2023-05-14 05:57:38'),
+(11, 'gallery5', 'pexels-william-choquette-1954524.jpg', '2023-05-14 05:58:07', '2023-05-14 05:59:04'),
+(12, 'gallery6', 'pexels-pixabay-416717.jpg', '2023-05-14 05:59:11', '2023-05-14 05:59:11');
 
 -- --------------------------------------------------------
 
@@ -98,8 +106,11 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(32, 'test1', 'test2', 'learn_about_bg.png', '2023-04-30 07:51:30', '2023-04-30 07:51:30'),
-(36, 'test2', 'teststs', 'single_blog_1.png', '2023-04-30 10:06:18', '2023-05-11 12:47:36');
+(32, 'Introducing our Outdoor Bootcamp: Embrace the Fresh Air and Elevate Your Fitness', 'Step out of the traditional gym setting and into our exciting new Outdoor Bootcamp. Experience invigorating workouts in the open air, surrounded by nature. Led by our experienced trainers, this high-energy group fitness class combines cardiovascular exercises, strength training, and team challenges to boost your endurance, build muscle, and push your limits. Get ready to embrace the fresh air, soak up the sunshine, and take your fitness journey to new heights with our Outdoor Bootcamp. Whether you\'re running through trails, performing bodyweight exercises on the grass, or participating in team-based activities, this unique outdoor experience will invigorate your workouts and provide a refreshing change of scenery.', 'pexels-pnw-production-7625047.jpg', '2023-04-30 07:51:30', '2023-05-14 06:08:48'),
+(36, '\"Fuel Your Body, Fuel Your Performance: Nutrition Workshop', 'Join us for our highly anticipated Nutrition Workshop, where our expert nutritionist will guide you on a journey to optimize your performance through proper fueling. Learn about the significance of macronutrients and micronutrients, the importance of hydration, and how to create a personalized nutrition plan tailored to your fitness goals. Gain valuable insights into pre and post-workout nutrition, as well as tips for maintaining a healthy diet and lifestyle. With the right nutrition knowledge, you can unlock your full potential and achieve the results you desire. This workshop will provide you with practical strategies and evidence-based information to enhance your overall health and fitness journey.', 'pexels-engin-akyurt-1435904.jpg', '2023-04-30 10:06:18', '2023-05-14 06:10:28'),
+(39, 'Power Up with Boxing Fitness: Introducing our Boxing Conditioning Class', 'Get ready to unleash your inner fighter with our new Boxing Conditioning Class. Led by our experienced boxing trainers, this class combines boxing techniques, cardio drills, and strength exercises to enhance your agility, speed, coordination, and overall fitness. Whether you\'re a beginner or an experienced boxer, this class is designed to challenge and inspire you while providing a fun and empowering workout. Learn proper boxing form, improve your endurance through intense rounds of punching combinations, and strengthen your muscles with bodyweight exercises. Channel your inner champion and experience the benefits of boxing as you build strength, burn calories, and boost your confidence. This class offers a dynamic and engaging way to break a sweat and unleash your inner warrior.', 'pexels-julia-larson-6456264.jpg', '2023-05-14 06:16:08', '2023-05-14 06:16:08'),
+(40, 'Strength and Conditioning: Performance Enhancement Workshop', 'Elevate your training and unleash your full potential with our Performance Enhancement Workshop. Led by our strength and conditioning experts, this workshop focuses on improving athletic performance, increasing strength, and enhancing power and agility. Learn advanced training techniques, proper form, and effective programming strategies to take your workouts to the next level. Whether you\'re an athlete looking to gain a competitive edge or simply seeking to optimize your fitness, this workshop will equip you with the tools and knowledge to reach peak performance. From resistance training and plyometrics to speed and agility drills, this workshop covers a wide range of exercises and methodologies tailored to your individual needs. Prepare to elevate your fitness game and achieve new levels of strength, power, and athleticism.', 'gallery1.png', '2023-05-14 06:43:11', '2023-05-14 06:43:11'),
+(41, 'Revamped Gym Facilities: Unleashing a New Era of Fitness Excellence', 'We\'re thrilled to unveil our newly revamped gym facilities, setting the stage for a new era of fitness excellence. Our upgraded facilities feature state-of-the-art equipment, spacious workout areas, and cutting-edge technology to elevate your fitness experience. Discover a wide range of cardio machines, strength training equipment, functional training zones, and dedicated spaces for group classes and personal training sessions. Immerse yourself in an environment designed to inspire and motivate you towards achieving your fitness goals. With our enhanced facilities, you\'ll enjoy a comfortable and dynamic space that caters to all fitness levels, ensuring you have everything you need to succeed on your fitness journey. Step into our new era of fitness and experience the ultimate workout environment.', 'pexels-william-choquette-1954524.jpg', '2023-05-14 06:44:13', '2023-05-14 06:44:13');
 
 -- --------------------------------------------------------
 
@@ -122,13 +133,6 @@ CREATE TABLE `orders` (
   `sub_id` int(11) NOT NULL,
   `qr` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Дамп данных таблицы `orders`
---
-
-INSERT INTO `orders` (`id`, `orderedSub`, `created_at`, `updated_at`, `totalPrice`, `clientName`, `address`, `phone`, `email`, `subEnd`, `user_id`, `sub_id`, `qr`) VALUES
-(17, '30 Days', '2023-05-10 15:29:58', '2023-05-10 15:29:58', 25, 'Artur', 'olevi', 55435345, 'admin@test.ee', '2023-06-09', 4, 5, '1683743398.svg');
 
 -- --------------------------------------------------------
 
@@ -179,8 +183,10 @@ CREATE TABLE `subscriptions` (
 --
 
 INSERT INTO `subscriptions` (`id`, `name`, `description`, `price`, `days`, `created_at`, `updated_at`) VALUES
-(5, '30 Days', 'Ka4alo4ka', 25, 30, '2023-05-10 12:23:12', '2023-05-10 12:23:16'),
-(6, '15 days', 'ka4', 5, 15, '2023-05-10 12:23:25', '2023-05-10 12:23:25');
+(7, 'Starter Package', 'Duration: 1 month', 40, 30, '2023-05-14 05:46:56', '2023-05-14 05:46:56'),
+(8, 'Premium Package', 'Duration: 3 months', 90, 90, '2023-05-14 05:47:42', '2023-05-14 05:47:42'),
+(9, 'Platinum Package', 'Duration: 6 months', 180, 180, '2023-05-14 05:48:39', '2023-05-14 05:48:39'),
+(10, 'HivePass', 'One-day pass', 3, 1, '2023-05-14 05:49:58', '2023-05-14 05:49:58');
 
 -- --------------------------------------------------------
 
@@ -270,13 +276,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `coach`
 --
 ALTER TABLE `coach`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
@@ -288,13 +294,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT для таблицы `schedule`
@@ -306,7 +312,7 @@ ALTER TABLE `schedule`
 -- AUTO_INCREMENT для таблицы `subscriptions`
 --
 ALTER TABLE `subscriptions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
