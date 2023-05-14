@@ -10,7 +10,7 @@ use Auth;
 
 class UserController extends Controller
 {
-    public function indexdd()
+    public function index()
     {
         $role = array('admin', 'client', 'manager');
         $users = User::orderBy('id', 'asc')->get();
