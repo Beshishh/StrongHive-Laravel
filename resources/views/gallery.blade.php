@@ -19,7 +19,7 @@
         </div>
         <!-- Hero End -->
         <!--? Gallery Area Start -->
-        <div class="gallery-area section-padding30">
+        <div class="gallery-area">
             <div class="container-fluid p-0 fix">
                 <div class="row">
                 @if (count ($galleryList ?? '') > 0)
