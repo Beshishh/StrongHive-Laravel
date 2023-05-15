@@ -105,15 +105,9 @@ class OrdersController extends Controller
         $subEnd = Orders::where('user_id', $id)->value('subEnd');
         $schedule = Schedule::orderBy('id', 'asc')->get();
         $qr = Orders::where('user_id', $id)->value('qr');
+
         return view('profile.index', compact(array('subStart', 'subEnd', 'qr', 'schedule')));
+
     }
-/*
-    public function profileQr(){
-        $id = Auth::id();
-        $qr = Orders::where('user_id', $id)->value('qr');
-        return view('profile', compact('qr'));
-    } */
-
-
 
 }

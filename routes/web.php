@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CoachController;
+use App\Http\Controllers\BMIController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Controller;
@@ -109,7 +110,15 @@ Route::group(['middleware' => ['auth']], function (){
             Route::get('/profile', function () {
                 return view('profile');
             });
-            Route::get('/profile', [OrdersController::class,'profileSub']);
+            Route::get('/profile', [BMIController::class, 'index'])->name('profile.index');
+            Route::post('/profile/calculate-bmi', [BMIController::class, 'calculate'])->name('profile.calculate');
+            Route::get('/profile', [OrdersController::class,'profileSub',]);
+
+
+
+
+
+
 
         });    // Route::group(['middleware' => ['auth']], function (){
 

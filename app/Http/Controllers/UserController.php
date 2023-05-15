@@ -16,16 +16,16 @@ class UserController extends Controller
         $users = User::orderBy('id', 'asc')->get();
         return view('users.index', compact('users', 'role'));
     }
-    
-    
+
+
     public function search(User $users)
-    {  
+    {
         if (request('search')) {
             $users = User::where('name', 'like', '%' . request('search') . '%')->get();
         } else {
             $users = User::all();
         }
-    
+
         return view('users.index', compact('users'));
     }
 
@@ -148,6 +148,8 @@ public function profile_update(Request $request)
     }
     return redirect('/profile');
 }
+
+
 
 
 }

@@ -80,7 +80,7 @@
                                             <p class="m-b-10 f-w-600">Email</p>
                                             <h6 class="text-muted f-w-400">{{ Auth::user()->email }}</h6>
                                         </div>
-                                        <form action="{{ url('profile/' .Auth::user()->id) }}" method="GET">
+                                    <form action="{{ url('profile/' .Auth::user()->id) }}" method="GET">
                                         {{ csrf_field() }}
                                             <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" title="edit">Edit Profile</button>
                                         </form>
@@ -96,6 +96,26 @@
                                         @endif
                                     </div>
                                     </div>
+                                    /* BMI */
+                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default text-center f-w-600">BMI</h6>
+                                    <div class="row text-center">
+                                    <h1>BMI Calculator</h1>
+
+                                   @if (session('bmi'))
+                                       <h2>Your BMI: {{ session('bmi') }}</h2>
+                                       <h3>Category: {{ session('bmiCategory') }}</h3>
+                                   @endif
+
+                                    <form method="POST" action="{{ route('profile.calculate') }}">
+                                        @csrf
+                                        <label for="weight">Weight (kg):</label>
+                                        <input type="text" name="weight" id="weight" required><br>
+
+                                        <label for="height">Height (m):</label>
+                                        <input type="text" name="height" id="height" required><br>
+
+                                        <button type="submit">Calculate</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
