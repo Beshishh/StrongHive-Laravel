@@ -10,10 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Stripe\Checkout\Session;
 use Stripe\Customer;
-use Stripe\Exception\SignatureVerificationException;
-use Stripe\Exception\UnexpectedValueException;
 use Stripe\Stripe;
-use Stripe\Webhook;
 
 class SubscriptionsController extends Controller
 {

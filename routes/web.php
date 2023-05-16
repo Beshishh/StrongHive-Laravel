@@ -111,14 +111,7 @@ Route::group(['middleware' => ['auth']], function (){
                 return view('profile');
             });
             Route::get('/profile', [BMIController::class, 'index'])->name('profile.index');
-            Route::post('/profile/calculate-bmi', [BMIController::class, 'calculate'])->name('profile.calculate');
-            Route::get('/profile', [OrdersController::class,'profileSub',]);
-
-
-
-
-
-
+            Route::get('/profile', [OrdersController::class,'profileSub']);
 
             Route::get("/payment-success", [SubscriptionsController::class, "successPayment"])->name("success-payment");
         });    // Route::group(['middleware' => ['auth']], function (){
