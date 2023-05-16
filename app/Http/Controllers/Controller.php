@@ -29,7 +29,7 @@ class Controller extends BaseController
         $schedule = Schedule::orderBy('id', 'asc')->get();
         $news = News::orderBy('created_at', 'desc')->take(2)->get();
         $coach = Coach::orderBy('id', 'asc')->get();
-        
+
         $subscriptions = Subscriptions::orderBy('price', 'asc')->take(3)->get();
         return view('index', compact('galleryLimit', 'coach', 'subscriptions', 'news', 'galleryBigImage', 'schedule'));
     }
@@ -50,22 +50,22 @@ class Controller extends BaseController
     public function newsList(News $news)
     {
         $newsQuery = News::query();
-    
+
         if (request('search')) {
             $newsQuery->where('title', 'like', '%' . request('search') . '%');
         }
-    
+
         $newsList = $newsQuery->orderBy('created_at', 'desc')->get();
         $schedule = Schedule::orderBy('id', 'asc')->get();
         $dayNumber = date('d');
         $monthNumber = date('m');
-    
+
         return view('blog', compact('newsList', 'schedule'));
     }
 
 
     public function showNews(News $news)
-    {  
+    {
         $schedule = Schedule::orderBy('id', 'asc')->get();
         return view('blog_details', compact('news' , 'schedule'));
     }
