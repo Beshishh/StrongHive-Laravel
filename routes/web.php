@@ -104,19 +104,20 @@ Route::group(['middleware' => ['auth']], function (){
             Route::post('/profile/{users}', [UserController::class,'profile_update']);
             Route::get('/edituser/{users}', [UserController::class,'edit']);
             Route::post('/edituser/{users}', [UserController::class,'update']);
-            Route::get('/createorder/{subscriptions}', [SubscriptionsController::class,'orderscreate']);
+            Route::get('/createorder/{subscriptions}', [SubscriptionsController::class,'orderscreate'])->name('createorder');
             Route::post('/createorder/{subscriptions}', [SubscriptionsController::class,'orderstore']);
             Route::get('/profile', function () {
                 return view('profile');
             });
             Route::get('/profile', [OrdersController::class,'profileSub']);
 
+            Route::get("/payment-success", [SubscriptionsController::class, "successPayment"])->name("success-payment");
         });    // Route::group(['middleware' => ['auth']], function (){
 
 Route::get('/', [Controller::class,'IndexController']);
 
 
-Route::get('/services', [SubscriptionsController::class,'pricelist']);
+Route::get('/services', [SubscriptionsController::class,'pricelist'])->name('services');
 
 Route::get('/blog', [Controller::class,'newsList']);
 
@@ -141,3 +142,4 @@ Route::get('/gallery', [GalleryController::class,'galleryList']);
 Route::get('/login', [AuthController::class,'login'])->name('login');
 Route::post('/login', [AuthController::class,'authenticate']);
 Route::get('/logout', [AuthController::class,'logout'])->name('logout');
+
