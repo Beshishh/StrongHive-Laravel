@@ -10,12 +10,9 @@ class Kernel extends ConsoleKernel
     /**
      * Define the application's command schedule.
      */
-    protected function schedule(Schedule $schedule)
-    {
-        $schedule->call(function () {
-            DB::table('orders')->where('subEnd', '<=', now())->delete();
-        })->daily();
-    }
+    protected $commands = [
+        \App\Console\Commands\DeleteOldRecords::class,
+    ];
 
     /**
      * Register the commands for the application.

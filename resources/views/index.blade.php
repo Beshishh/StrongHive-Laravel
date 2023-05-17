@@ -13,7 +13,7 @@
                         <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
                             <div class="hero__caption">
                                 <h1 data-animation="fadeInLeft">Transform Your Body, Transform Your Life</h1>
-                                <a href="/register" class="btn hero-btn" data-animation="fadeInLeft">became
+                                <a href="/register" class="btn hero-btn" data-animation="fadeInLeft">become
                                     a member</a>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                         <!-- Section Tittle -->
                         <div class="section-tittle mb-55">
                             <span>Client Feedback</span>
-                            <h2>What Our Client thik about our gym</h2>
+                            <h2>What Our Client think about our gym</h2>
                         </div>
                         <!-- Testimonial Start -->
                         <div class="h1-testimonial-active">

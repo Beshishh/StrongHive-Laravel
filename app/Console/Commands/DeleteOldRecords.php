@@ -12,8 +12,8 @@ class DeleteOldRecords extends Command
 
     public function handle()
     {
-        $date = now()->subDays(30);
-        Orders::where('subEnd', '<', $date)->delete();
-        $this->info('Old records have been deleted successfully.');
+        Orders::whereDate('subEnd', '<', now())->delete();
+    
+        $this->info('Expired data cleared successfully.');
     }
 }
