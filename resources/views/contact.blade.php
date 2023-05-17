@@ -18,7 +18,7 @@
         </div>
         <!-- Hero End -->
         <!--?  Contact Area start  -->
-        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
+        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.webp">
         <section class="contact-section">
             <div class="container">
                 <div class="d-none d-sm-block mb-5 pb-4">

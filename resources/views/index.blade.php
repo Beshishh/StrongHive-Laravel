@@ -58,7 +58,7 @@
     </section>
     <!-- About-2 Area End -->
     <!--? Services Area Start -->
-    <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
+    <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.webp">
         <!--? Want To work -->
         <section class="wantToWork-area w-padding">
             <div class="container">
@@ -210,7 +210,7 @@
         </div>
     </div>
     <!-- Gallery Area End -->
-    <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
+    <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.webp">
         <!--? Want To work -->
         <section class="wantToWork-area w-padding">
             <div class="container">

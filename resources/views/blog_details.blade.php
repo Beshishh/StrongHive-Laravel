@@ -18,7 +18,7 @@
    </div>
    <!-- Hero End -->
    <!--? Blog Area Start -->
-   <section class="services-area pt-100 pb-150 section-bg" data-background="/assets/img/gallery/section_bg01.png">
+   <section class="services-area pt-100 pb-150 section-bg" data-background="/assets/img/gallery/section_bg01.webp">
       <section class="blog_area single-post-area section-padding">
          <div class="container">
             <div class="row">

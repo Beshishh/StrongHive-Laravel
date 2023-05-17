@@ -19,7 +19,7 @@
         </div>
         <!-- Hero End -->
         <!--? Contact form Start -->
-        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.png">
+        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.webp">
         <div class="contact-form-main mt-100 mb-100">
             <div class="container">
                 <div class="row justify-content-end">
@@ -86,5 +86,5 @@
         </div>
         <!-- Contact form End -->
     </main>
- 
+
 @endsection
