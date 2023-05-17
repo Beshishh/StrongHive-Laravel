@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use App\Models\Orders;
 
@@ -13,7 +14,7 @@ class DeleteOldRecords extends Command
     public function handle()
     {
         $expired = Carbon::now()->subDays(30);
-        $records = MyModel::where('subEnd', '<', $expired)->get();
+        $records = Orders::where('subEnd', '<', $expired)->get();
         dump($records); // выводим записи для удаления
         $records->delete(); // удаляем записи
     }
