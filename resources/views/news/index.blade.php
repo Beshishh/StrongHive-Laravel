@@ -26,7 +26,7 @@
               </div>
                 </div>
                 </div>
-                <h4 class="card-title"> News Table</h4>
+                <h4 class="card-title"> News Tableу</h4>
                 <a href = "addnews" class ="btn btn-primary btn-sm btn-flat">
                 <i class="fa fa-plus"></i>New<a>
               <div class="card-body">
