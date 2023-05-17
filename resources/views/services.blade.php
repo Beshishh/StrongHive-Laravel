@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-3">
-                            <a href="services.html" class="btn wantToWork-btn f-right">More Services</a>
+                            <a href="{{ url('createorder/' .$subscriptions->id) }}" class="btn wantToWork-btn f-right">More Services</a>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                             <i class="flaticon-fitness"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">{{ $subscriptions->name }}</a></h5>
+                            <h5><a href="{{ url('createorder/' .$subscriptions->id) }}">{{ $subscriptions->name }}</a></h5>
                             <p>{{ $subscriptions->description }}</p>
                             <h2>{{ $subscriptions->price }}€ </h2>
 

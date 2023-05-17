@@ -242,7 +242,7 @@
                                    <img src="assets/img/coaches/{{ $coaches->image}}" class="img-fluid" alt="">
                                         <div class="team-caption">
 
-                                            <h3><a href="#">{{ $coaches->firstname }} {{ $coaches->lastname }}</a></h3>
+                                            <h3><a href="/services">{{ $coaches->firstname }} {{ $coaches->lastname }}</a></h3>
                                             <span>{{ $coaches->description }}</span>
                                         </div>
                                     </div>
