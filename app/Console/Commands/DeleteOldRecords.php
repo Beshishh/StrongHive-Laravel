@@ -14,8 +14,7 @@ class DeleteOldRecords extends Command
     {
         
         $records = Orders::whereDate('subEnd', '<', now())->delete();
-        dump($records); // выводим записи для удаления
-        $records->delete(); // удаляем записи
+
         $this->info('Expired data cleared successfully.');
     }
 }
