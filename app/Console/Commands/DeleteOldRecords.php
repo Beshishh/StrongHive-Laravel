@@ -12,8 +12,9 @@ class DeleteOldRecords extends Command
 
     public function handle()
     {
-        Orders::whereDate('subEnd', '<', now())->delete();
-    
-        $this->info('Expired data cleared successfully.');
+        $expired = Carbon::now()->subDays(30);
+        $records = MyModel::where('subEnd', '<', $expired)->get();
+        dump($records); // выводим записи для удаления
+        $records->delete(); // удаляем записи
     }
 }
