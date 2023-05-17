@@ -20,7 +20,7 @@
     </div>
 </div>
 
-<section class="services-area pt-100 pb-150 section-bg" data-background="../assets/img/gallery/section_bg01.png">
+<section class="services-area pt-100 pb-150 section-bg" data-background="../assets/img/gallery/section_bg01.webp">
     <div class="container">
           <div class="page-content page-container" id="page-content">
               <div class="profile-padding">
