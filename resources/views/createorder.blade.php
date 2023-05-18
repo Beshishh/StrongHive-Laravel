@@ -50,7 +50,6 @@
 
                                                     <button type="submit" class="btn btn-primary w-60 mt-25">GO TO PAYMENT</button>
                                                 </form>
-                                            </div>
                                           <script>
                                                 function disallowSpaces(event) {
                                                     if (event.keyCode === 32) {
