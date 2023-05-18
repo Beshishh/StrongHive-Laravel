@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use App\Models\Orders;
 
 class DeleteOldRecords extends Command
