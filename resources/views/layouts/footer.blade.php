@@ -112,6 +112,14 @@
 <script src="/assets/js/main.js"></script>
 <script type="text/javascript" src="/js/mdb.min.js"></script>
 
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+        loader.style.display = "none";
+    })
+</script>
+
+
 </body>
 
 </html>
