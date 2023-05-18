@@ -7666,3 +7666,10 @@ del {
     border: 4px solid #FF7F11;
     border-radius: 3%;
 }
+#preloader{
+    background: #242423 url(../img/dumbell_loader.gif) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}

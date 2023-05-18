@@ -27,8 +27,6 @@
                 </div>
                 </div>
                 <h4 class="card-title"> Orders Table</h4>
-                <a href = "addorder" class ="btn btn-primary btn-sm btn-flat">
-                <i class="fa fa-plus"></i>New<a>
               <div class="card-body">
               </div>
                 <div class="table-responsive">

@@ -1,5 +1,6 @@
 <!doctype html>
 
+<div id="preloader"></div>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -33,6 +34,7 @@
 </head>
 
 <body>
+
     <header>
         <!--? Header Start -->
         <div class="header-area header-transparent">
