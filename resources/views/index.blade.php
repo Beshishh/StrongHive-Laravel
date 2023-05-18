@@ -83,7 +83,7 @@
                             <i class="flaticon-fitness"></i>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">{{ $subscriptions->name }}</a></h5>
+                            <h5><a href="/services">{{ $subscriptions->name }}</a></h5>
                             <p>{{ $subscriptions->description }}</p>
                             <h2>{{ $subscriptions->price }}€ </h2>
 
@@ -242,7 +242,7 @@
                                    <img src="assets/img/coaches/{{ $coaches->image}}" class="img-fluid" alt="">
                                         <div class="team-caption">
 
-                                            <h3><a href="/services">{{ $coaches->firstname }} {{ $coaches->lastname }}</a></h3>
+                                            <h3>{{ $coaches->firstname }} {{ $coaches->lastname }}</h3>
                                             <span>{{ $coaches->description }}</span>
                                         </div>
                                     </div>

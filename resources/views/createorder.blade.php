@@ -40,11 +40,11 @@
                                               <label class="form-label">Client name</label>
                                                   <input type="name" name="clientName" class="form-control text-center"><br>
                                               <label class="form-label">Email</label>
-                                                  <input type="cardholderName" name="email" class="form-control text-center" value="{{ Auth::user()->email }}"><br>
+                                                  <input type="cardholderName" name="email" class="form-control text-center" value="{{ Auth::user()->email }}" required><br>
                                                 <label class="form-label">Address</label>
-                                                    <input type="cardholderName" name="address" class="form-control text-center>"><br>
+                                                    <input type="cardholderName" name="address" class="form-control text-center>" required><br>
                                                 <label class="form-label">Phone</label>
-                                                <input type="cardholderName" name="phone" class="form-control text-center">
+                                                <input type="cardholderName" name="phone" class="form-control text-center" required>
                                                 <button type="submit" class="btn btn-primary w-60 mt-25">GO TO PAYMENT</button>
                                           </form>
                                                 <div class="col-lg-4 ml-25">
