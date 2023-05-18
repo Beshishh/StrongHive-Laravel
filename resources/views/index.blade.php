@@ -217,7 +217,7 @@
                 <div class="row align-items-end justify-content-between">
                     <div class="col-lg-6 col-md-9 col-sm-9">
                         <div class="section-tittle">
-                            <span>oUR TEAM MEMBERS</span>
+                            <span>oUR TEAM MEMBERSt</span>
                             <h2>Our Most Exprienced Trainers</h2>
                         </div>
                     </div>
