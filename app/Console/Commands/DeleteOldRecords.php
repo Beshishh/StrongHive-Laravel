@@ -11,7 +11,7 @@ class DeleteOldRecords extends Command
     protected $signature = 'delete:old-records';
     protected $description = 'Delete records older than 30 days';
 
-    public function handle()
+    public function handle(Orders $orders)
     {
         $qrCodePath = public_path('qr-codes/' . $orders->qr);
 
