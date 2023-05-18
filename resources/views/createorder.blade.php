@@ -31,22 +31,38 @@
                                  <div class="col-sm-8 w-100">
                                      <div class="card-block">
                                          <div class="row text-center align-center">
+                                         <h2>Payment Info</h2>
+                                            <div class="form-container d-flex justify-content-center">
+                                                @include('common.errors')
+                                                <form action="{{ url('createorder/' .$subscriptions->id) }}" method="POST" class="form-label col-md-4" enctype="multipart/form-data">
+                                                    {{ csrf_field() }}
+                                                    <label class="form-label">Client name</label>
+                                                    <input type="text" name="clientName" class="form-control text-center" onkeydown="return disallowSpaces(event)" required><br>
 
-                                          <h2>Payment Info</h2>
-                                           <div class="form-container d-flex justify-content-center">
-                                          @include('common.errors')
-                                          <form action="{{ url('createorder/' .$subscriptions->id) }}" method="POST" class="form-label col-md-4" enctype="multipart/form-data">
-                                          {{ csrf_field() }}
-                                              <label class="form-label">Client name</label>
-                                                  <input type="name" name="clientName" class="form-control text-center"><br>
-                                              <label class="form-label">Email</label>
-                                                  <input type="cardholderName" name="email" class="form-control text-center" value="{{ Auth::user()->email }}" required><br>
-                                                <label class="form-label">Address</label>
-                                                    <input type="cardholderName" name="address" class="form-control text-center>" required><br>
-                                                <label class="form-label">Phone</label>
-                                                <input type="cardholderName" name="phone" class="form-control text-center" required>
-                                                <button type="submit" class="btn btn-primary w-60 mt-25">GO TO PAYMENT</button>
-                                          </form>
+                                                    <label class="form-label">Email</label>
+                                                    <input type="email" name="email" class="form-control text-center" value="{{ Auth::user()->email }}" required><br>
+
+                                                    <label class="form-label">Address</label>
+                                                    <input type="text" name="address" class="form-control text-center" oninput="removeSpaces(this)" required><br>
+
+                                                    <label class="form-label">Phone</label>
+                                                    <input type="text" name="phone" class="form-control text-center" onkeydown="return disallowSpaces(event)" required>
+
+                                                    <button type="submit" class="btn btn-primary w-60 mt-25">GO TO PAYMENT</button>
+                                                </form>
+                                            </div>
+                                          <script>
+                                                function disallowSpaces(event) {
+                                                    if (event.keyCode === 32) {
+                                                        event.preventDefault();
+                                                        return false;
+                                                    }
+                                                }
+
+                                                function removeSpaces(input) {
+                                                    input.value = input.value.replace(/\s/g, '');
+                                                }
+                                            </script>
                                                 <div class="col-lg-4 ml-25">
                                                     <div class="card summary position-sticky top-0">
                                                       <div class="p-4 bg-light ">
