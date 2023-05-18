@@ -37,16 +37,16 @@
                                                 <form action="{{ url('createorder/' .$subscriptions->id) }}" method="POST" class="form-label col-md-4" enctype="multipart/form-data">
                                                     {{ csrf_field() }}
                                                     <label class="form-label">Client name</label>
-                                                    <input type="text" name="clientName" class="form-control text-center" onkeydown="return disallowSpaces(event)" required><br>
+                                                    <input type="text" name="clientName" class="form-control text-center"required><br>
 
                                                     <label class="form-label">Email</label>
                                                     <input type="email" name="email" class="form-control text-center" value="{{ Auth::user()->email }}" required><br>
 
                                                     <label class="form-label">Address</label>
-                                                    <input type="text" name="address" class="form-control text-center" oninput="removeSpaces(this)" required><br>
+                                                    <input type="text" name="address" class="form-control text-center" required><br>
 
                                                     <label class="form-label">Phone</label>
-                                                    <input type="text" name="phone" class="form-control text-center" onkeydown="return disallowSpaces(event)" required>
+                                                    <input type="text" name="phone" class="form-control text-center" oninput="removeSpaces(this)"  onkeydown="return disallowSpaces(event)" required>
 
                                                     <button type="submit" class="btn btn-primary w-60 mt-25">GO TO PAYMENT</button>
                                                 </form>
