@@ -12,6 +12,11 @@ class DeleteOldRecords extends Command
 
     public function handle()
     {
+        $qrCodePath = public_path('qr-codes/' . $orders->qr);
+
+        if (file_exists($qrCodePath)) {
+            unlink($qrCodePath);
+        }
         Orders::where('subEnd', '<', now())->delete();
         $this->info('Old records have been deleted successfully.');
     }
