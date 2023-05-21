@@ -169,8 +169,10 @@ class SubscriptionsController extends Controller
         $data['qr'] = time() . '.svg';
         file_put_contents(public_path('qr-codes/' . $data['qr']), $qrCode);
 
+
         Orders::create($data);
 
-        return view('subscriptions.success-payment', compact('schedule'));
+
+        return view('subscriptions.success-payment', compact('schedule'), compact('data'));
     }
 }
