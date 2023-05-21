@@ -58,11 +58,13 @@
                                                         return false;
                                                     }
                                                     var charCode = event.which ? event.which : event.keyCode;
-                                                        if (charCode < 48 || charCode > 57) {
+                                                    if (charCode < 48 || charCode > 57) {
+                                                        if (charCode !== 8) { // Разрешить нажатие кнопки удаления (Backspace)
                                                             event.preventDefault();
                                                             return false;
                                                         }
-                                                        return true;
+                                                    }
+                                                    return true;
                                                 }
 
                                                 function removeSpaces(input) {
