@@ -3,6 +3,7 @@ document.addEventListener('touchstart', onTouchStart, {passive: true});
 const btn = document.getElementById('downloadImage');
 const url = "https://api.qrserver.com/v1/create-qr-code/?size=328x328&data=dasda434235";
 
+
 btn.addEventListener('click', (event) => {
   event.preventDefault();
   console.log('ABC')
@@ -25,4 +26,5 @@ function downloadImage(url) {
     a.remove();
   })
 }
+
 
