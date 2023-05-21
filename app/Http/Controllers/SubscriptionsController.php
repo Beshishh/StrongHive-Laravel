@@ -171,6 +171,7 @@ class SubscriptionsController extends Controller
 
         Orders::create($data);
 
-        return view('subscriptions.success-payment', compact('schedule'));
+
+        return view('subscriptions.success-payment', compact('schedule'), compact('data'));
     }
 }

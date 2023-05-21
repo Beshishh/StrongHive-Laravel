@@ -114,6 +114,8 @@ Route::group(['middleware' => ['auth']], function (){
             Route::get('/profile', [OrdersController::class,'profileSub']);
 
             Route::get("/payment-success", [SubscriptionsController::class, "successPayment"])->name("success-payment");
+
+
         });    // Route::group(['middleware' => ['auth']], function (){
 
 Route::get('/', [Controller::class,'IndexController']);
