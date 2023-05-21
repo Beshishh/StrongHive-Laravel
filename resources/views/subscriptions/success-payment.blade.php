@@ -3,8 +3,6 @@
 @section('main-container')
 
 
-    <main>
-        <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.webp">
     <!--? Hero Start -->
     <div class="slider-area2">
         <div class="slider-height2 d-flex align-items-center">
@@ -19,8 +17,8 @@
             </div>
         </div>
     </div>
+    <section class="services-area pt-100 pb-150 section-bg" data-background="assets/img/gallery/section_bg01.webp">
     <div class="container pt-25">
-
             <!-- This encapsulation is required to ensure correct rendering on Windows 10 Mail app. -->
             <tr bgcolor="#d7d7d7">
                 <td style="color: #FFFFFC; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; vertical-align: top;">
@@ -77,7 +75,7 @@
                                 Email: {{ $data['email'] }}<br/></p>
                                 Phone: {{ $data['phone'] }}<br/></p>
                                     <br>
-                                <button href="/services" class="btn btn-default submit">Return to services</button>
+                                <a href="/profile" class="btn hero-btn" data-animation="fadeInLeft" tabindex="0">Return to profile</a>
                             </td>
                             <td width="36" style="color: #FFFFFC; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 16px; vertical-align: top;"></td>
                         </tr>
@@ -115,9 +113,8 @@
                 </td>
             </tr>
         </table>
-        </section>
-        </div>
-    </main>
+    </section>
+    </div>
 
         <!-- Content End -->
 @endsection
