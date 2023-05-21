@@ -46,7 +46,8 @@
                                                     <input type="text" name="address" class="form-control text-center" maxlength="254" required><br>
 
                                                     <label class="form-label">Phone</label>
-                                                    <input type="text" name="phone" class="form-control text-center" maxlength="19" pattern="[0-9]+ oninput="removeSpaces(this)"  onkeydown="return disallowSpaces(event)" required>
+                                                    <input type="text" name="phone" class="form-control text-center" maxlength="19"
+                                                     oninput="removeSpaces(this)"  onkeydown="return disallowSpaces(event)" required>
 
                                                     <button type="submit" class="btn btn-primary w-60 mt-25">GO TO PAYMENT</button>
                                                 </form>
@@ -56,6 +57,12 @@
                                                         event.preventDefault();
                                                         return false;
                                                     }
+                                                    var charCode = event.which ? event.which : event.keyCode;
+                                                        if (charCode < 48 || charCode > 57) {
+                                                            event.preventDefault();
+                                                            return false;
+                                                        }
+                                                        return true;
                                                 }
 
                                                 function removeSpaces(input) {
