@@ -57,8 +57,8 @@
                             });
                         }
                     </script>
-                    <script 
-                        src="https://maps.googleapis.com/maps/api/js?key=IzaSyBcaol-F1dDPns036CuK-rfA4EJqOfeDyQ&callback=initMap">
+                    <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcaol-F1dDPns036CuK-rfA4EJqOfeDyQ&callback=initMap">
                     </script>
 
                 </div>
