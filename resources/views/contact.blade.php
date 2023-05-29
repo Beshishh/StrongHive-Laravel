@@ -26,8 +26,8 @@
                     <script>
                         function initMap() {
                             var uluru = {
-                                lat: -25.363,
-                                lng: 131.044
+                                lat: 59.3,
+                                lng: 27.3
                             };
                             var grayStyles = [{
                                     featureType: "all",
